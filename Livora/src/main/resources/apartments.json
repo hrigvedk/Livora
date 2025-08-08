@@ -1,0 +1,2768 @@
+[
+  {
+    "id": "apt-bos-001",
+    "title": "Sunny 1-BR in Dorchester",
+    "price": 3176,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "location": {
+      "address": "147 Commonwealth Ave, Dorchester",
+      "latitude": 42.352469,
+      "longitude": -71.055088,
+      "neighborhood": "dorchester"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "balcony",
+      "dishwasher",
+      "laundry",
+      "gym"
+    ],
+    "squareFeet": 994,
+    "available": "2024-02-28",
+    "photos": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-002",
+    "title": "Sunny 0-BR in Cambridge",
+    "price": 1457,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "location": {
+      "address": "392 Commonwealth Ave, Cambridge",
+      "latitude": 42.363456,
+      "longitude": -71.059983,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "elevator",
+      "dishwasher",
+      "laundry",
+      "garage"
+    ],
+    "squareFeet": 890,
+    "available": "2024-02-04",
+    "photos": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-003",
+    "title": "Modern 3-BR in Beacon Hill",
+    "price": 4850,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "location": {
+      "address": "149 Boylston St, Beacon Hill",
+      "latitude": 42.376712,
+      "longitude": -71.06753,
+      "neighborhood": "beacon hill"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "study room",
+      "elevator",
+      "bike storage",
+      "laundry",
+      "dishwasher"
+    ],
+    "squareFeet": 1683,
+    "available": "2024-02-24",
+    "photos": [
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-004",
+    "title": "Elegant 1-BR in Cambridge",
+    "price": 1975,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "location": {
+      "address": "742 Washington St, Cambridge",
+      "latitude": 42.377055,
+      "longitude": -71.063743,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "dishwasher",
+      "study room",
+      "fireplace",
+      "balcony",
+      "bike storage"
+    ],
+    "squareFeet": 774,
+    "available": "2024-01-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-005",
+    "title": "Modern 2-BR in South End",
+    "price": 2894,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "760 Boylston St, South End",
+      "latitude": 42.341342,
+      "longitude": -71.042241,
+      "neighborhood": "south end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "rooftop",
+      "laundry",
+      "balcony",
+      "fireplace"
+    ],
+    "squareFeet": 1402,
+    "available": "2024-01-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-006",
+    "title": "Modern 0-BR in South End",
+    "price": 1191,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "location": {
+      "address": "415 Massachusetts Ave, South End",
+      "latitude": 42.348261,
+      "longitude": -71.064439,
+      "neighborhood": "south end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "laundry",
+      "fireplace",
+      "bike storage",
+      "central air",
+      "dishwasher",
+      "yard"
+    ],
+    "squareFeet": 410,
+    "available": "2024-01-11",
+    "photos": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-007",
+    "title": "Modern 1-BR in Fenway",
+    "price": 2607,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "289 Washington St, Fenway",
+      "latitude": 42.373057,
+      "longitude": -71.052338,
+      "neighborhood": "fenway"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "elevator",
+      "garage",
+      "balcony",
+      "gym",
+      "rooftop",
+      "doorman"
+    ],
+    "squareFeet": 979,
+    "available": "2024-02-29",
+    "photos": [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-008",
+    "title": "Spacious 3-BR in Roxbury",
+    "price": 2193,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "location": {
+      "address": "550 Commonwealth Ave, Roxbury",
+      "latitude": 42.378886,
+      "longitude": -71.077588,
+      "neighborhood": "roxbury"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "elevator",
+      "balcony",
+      "fireplace",
+      "dishwasher"
+    ],
+    "squareFeet": 1845,
+    "available": "2024-03-29",
+    "photos": [
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-009",
+    "title": "Modern 3-BR in Fenway",
+    "price": 2721,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "location": {
+      "address": "655 Commonwealth Ave, Fenway",
+      "latitude": 42.376035,
+      "longitude": -71.073431,
+      "neighborhood": "fenway"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "yard",
+      "study room",
+      "rooftop"
+    ],
+    "squareFeet": 1653,
+    "available": "2024-03-31",
+    "photos": [
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-010",
+    "title": "Spacious 3-BR in Fenway",
+    "price": 3833,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "731 Boylston St, Fenway",
+      "latitude": 42.356995,
+      "longitude": -71.039991,
+      "neighborhood": "fenway"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "balcony",
+      "gym",
+      "laundry"
+    ],
+    "squareFeet": 1588,
+    "available": "2024-03-10",
+    "photos": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-011",
+    "title": "Spacious 2-BR in Back Bay",
+    "price": 4487,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "575 Commonwealth Ave, Back Bay",
+      "latitude": 42.361318,
+      "longitude": -71.059941,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "rooftop",
+      "pool",
+      "laundry",
+      "study room",
+      "central air",
+      "fireplace"
+    ],
+    "squareFeet": 1188,
+    "available": "2024-01-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-012",
+    "title": "Sunny 3-BR in South End",
+    "price": 1514,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "location": {
+      "address": "565 Washington St, South End",
+      "latitude": 42.363058,
+      "longitude": -71.068781,
+      "neighborhood": "south end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "garage",
+      "pool",
+      "gym",
+      "elevator",
+      "doorman",
+      "bike storage"
+    ],
+    "squareFeet": 1676,
+    "available": "2024-01-03",
+    "photos": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-013",
+    "title": "Cozy 2-BR in Dorchester",
+    "price": 4949,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "773 Commonwealth Ave, Dorchester",
+      "latitude": 42.34157,
+      "longitude": -71.051554,
+      "neighborhood": "dorchester"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "balcony",
+      "elevator",
+      "pool"
+    ],
+    "squareFeet": 1442,
+    "available": "2024-01-04",
+    "photos": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-014",
+    "title": "Spacious 0-BR in Roxbury",
+    "price": 2580,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "location": {
+      "address": "553 Commonwealth Ave, Roxbury",
+      "latitude": 42.342535,
+      "longitude": -71.045024,
+      "neighborhood": "roxbury"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "pool",
+      "study room",
+      "dishwasher"
+    ],
+    "squareFeet": 562,
+    "available": "2024-03-27",
+    "photos": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-015",
+    "title": "Spacious 1-BR in Roxbury",
+    "price": 2114,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "location": {
+      "address": "932 Washington St, Roxbury",
+      "latitude": 42.369732,
+      "longitude": -71.04247,
+      "neighborhood": "roxbury"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "laundry",
+      "gym",
+      "study room",
+      "doorman"
+    ],
+    "squareFeet": 1143,
+    "available": "2024-01-24",
+    "photos": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-016",
+    "title": "Cozy 1-BR in South End",
+    "price": 4120,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "location": {
+      "address": "719 Massachusetts Ave, South End",
+      "latitude": 42.370923,
+      "longitude": -71.058009,
+      "neighborhood": "south end"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "balcony",
+      "central air",
+      "yard",
+      "elevator",
+      "dishwasher"
+    ],
+    "squareFeet": 1077,
+    "available": "2024-01-21",
+    "photos": [
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-017",
+    "title": "Modern 1-BR in Seaport",
+    "price": 4941,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "location": {
+      "address": "317 Commonwealth Ave, Seaport",
+      "latitude": 42.352014,
+      "longitude": -71.059185,
+      "neighborhood": "seaport"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "laundry",
+      "doorman",
+      "garage",
+      "study room"
+    ],
+    "squareFeet": 1131,
+    "available": "2024-01-12",
+    "photos": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-018",
+    "title": "Spacious 3-BR in Fenway",
+    "price": 1614,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "location": {
+      "address": "310 Commonwealth Ave, Fenway",
+      "latitude": 42.356374,
+      "longitude": -71.041,
+      "neighborhood": "fenway"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "yard",
+      "fireplace",
+      "balcony",
+      "gym"
+    ],
+    "squareFeet": 1657,
+    "available": "2024-03-14",
+    "photos": [
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-019",
+    "title": "Spacious 3-BR in Seaport",
+    "price": 4131,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "245 Washington St, Seaport",
+      "latitude": 42.358547,
+      "longitude": -71.066068,
+      "neighborhood": "seaport"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "yard",
+      "dishwasher",
+      "fireplace",
+      "doorman",
+      "study room",
+      "bike storage"
+    ],
+    "squareFeet": 1718,
+    "available": "2024-03-30",
+    "photos": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-020",
+    "title": "Cozy 1-BR in North End",
+    "price": 1724,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "682 Boylston St, North End",
+      "latitude": 42.341497,
+      "longitude": -71.066418,
+      "neighborhood": "north end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "balcony",
+      "central air",
+      "doorman",
+      "gym",
+      "pool",
+      "yard"
+    ],
+    "squareFeet": 1018,
+    "available": "2024-02-22",
+    "photos": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-021",
+    "title": "Sunny 3-BR in North End",
+    "price": 3475,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "location": {
+      "address": "372 Boylston St, North End",
+      "latitude": 42.373831,
+      "longitude": -71.051208,
+      "neighborhood": "north end"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "bike storage",
+      "laundry",
+      "dishwasher",
+      "pool",
+      "yard",
+      "fireplace"
+    ],
+    "squareFeet": 1546,
+    "available": "2024-01-31",
+    "photos": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-022",
+    "title": "Spacious 3-BR in Cambridge",
+    "price": 4884,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "location": {
+      "address": "669 Boylston St, Cambridge",
+      "latitude": 42.36396,
+      "longitude": -71.044485,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "dishwasher",
+      "laundry",
+      "garage",
+      "bike storage",
+      "study room",
+      "gym"
+    ],
+    "squareFeet": 1649,
+    "available": "2024-01-25",
+    "photos": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-023",
+    "title": "Modern 2-BR in Beacon Hill",
+    "price": 1884,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "591 Commonwealth Ave, Beacon Hill",
+      "latitude": 42.342161,
+      "longitude": -71.045182,
+      "neighborhood": "beacon hill"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "doorman",
+      "yard",
+      "bike storage"
+    ],
+    "squareFeet": 1545,
+    "available": "2024-02-14",
+    "photos": [
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-024",
+    "title": "Sunny 0-BR in Back Bay",
+    "price": 2357,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "261 Boylston St, Back Bay",
+      "latitude": 42.371288,
+      "longitude": -71.054161,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "bike storage",
+      "study room",
+      "fireplace",
+      "garage",
+      "yard",
+      "elevator"
+    ],
+    "squareFeet": 824,
+    "available": "2024-01-04",
+    "photos": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-025",
+    "title": "Modern 1-BR in South End",
+    "price": 2836,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "location": {
+      "address": "183 Commonwealth Ave, South End",
+      "latitude": 42.372631,
+      "longitude": -71.055262,
+      "neighborhood": "south end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "central air",
+      "fireplace",
+      "pool"
+    ],
+    "squareFeet": 915,
+    "available": "2024-01-17",
+    "photos": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-056",
+    "title": "Vintage 2-BR in Cambridge Porter Square",
+    "price": 3100,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "234 Porter St, Cambridge",
+      "latitude": 42.388765,
+      "longitude": -71.119876,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "near T",
+      "laundry",
+      "hardwood floors"
+    ],
+    "squareFeet": 1150,
+    "available": "2024-02-28",
+    "photos": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-057",
+    "title": "Modern 3-BR in Assembly Row",
+    "price": 4200,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "345 Assembly Row, Somerville",
+      "latitude": 42.392123,
+      "longitude": -71.077654,
+      "neighborhood": "somerville"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "gym",
+      "rooftop",
+      "concierge",
+      "near T"
+    ],
+    "squareFeet": 1600,
+    "available": "2024-03-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-058",
+    "title": "Cozy Studio in Chinatown",
+    "price": 1900,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "88 Beach St, Chinatown",
+      "latitude": 42.349876,
+      "longitude": -71.062345,
+      "neighborhood": "chinatown"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "near restaurants",
+      "laundry",
+      "doorman"
+    ],
+    "squareFeet": 480,
+    "available": "2024-01-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-059",
+    "title": "Waterfront 1-BR in Navy Yard",
+    "price": 3300,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "12 Constellation Wharf, Charlestown",
+      "latitude": 42.373456,
+      "longitude": -71.051234,
+      "neighborhood": "charlestown"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "water view",
+      "parking",
+      "gym",
+      "pool"
+    ],
+    "squareFeet": 850,
+    "available": "2024-03-08",
+    "photos": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-060",
+    "title": "Classic 2-BR in Beacon Hill",
+    "price": 4800,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "67 Mount Vernon St, Beacon Hill",
+      "latitude": 42.358765,
+      "longitude": -71.069123,
+      "neighborhood": "beacon hill"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "fireplace",
+      "historic charm",
+      "hardwood floors"
+    ],
+    "squareFeet": 1100,
+    "available": "2024-04-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-061",
+    "title": "Modern 2-BR in Innovation District",
+    "price": 4600,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "200 Pier 4 Blvd, Seaport",
+      "latitude": 42.350123,
+      "longitude": -71.041876,
+      "neighborhood": "seaport"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "harbor view",
+      "concierge",
+      "gym",
+      "rooftop",
+      "valet parking"
+    ],
+    "squareFeet": 1400,
+    "available": "2024-03-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-062",
+    "title": "Affordable 1-BR in Dorchester",
+    "price": 1650,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "890 Dorchester Ave, Dorchester",
+      "latitude": 42.315678,
+      "longitude": -71.058765,
+      "neighborhood": "dorchester"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "laundry",
+      "near T"
+    ],
+    "squareFeet": 650,
+    "available": "2024-02-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-063",
+    "title": "Spacious 2-BR in Davis Square",
+    "price": 3000,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "567 College Ave, Somerville",
+      "latitude": 42.396876,
+      "longitude": -71.122345,
+      "neighborhood": "somerville"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "near T",
+      "laundry",
+      "dishwasher",
+      "balcony"
+    ],
+    "squareFeet": 1200,
+    "available": "2024-02-22",
+    "photos": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-064",
+    "title": "Modern 1-BR in Kendall Square",
+    "price": 3800,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "123 Main St, Cambridge",
+      "latitude": 42.362345,
+      "longitude": -71.086789,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "near MIT",
+      "gym",
+      "rooftop",
+      "parking"
+    ],
+    "squareFeet": 750,
+    "available": "2024-03-10",
+    "photos": [
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-065",
+    "title": "Garden Apartment 2-BR in Brighton",
+    "price": 2600,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "456 Brighton Ave, Brighton",
+      "latitude": 42.348765,
+      "longitude": -71.151234,
+      "neighborhood": "brighton"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "private garden",
+      "parking",
+      "laundry"
+    ],
+    "squareFeet": 1000,
+    "available": "2024-02-14",
+    "photos": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-066",
+    "title": "Penthouse Studio in Leather District",
+    "price": 2900,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "89 South St, Leather District",
+      "latitude": 42.351876,
+      "longitude": -71.056789,
+      "neighborhood": "leather district"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "city view",
+      "rooftop access",
+      "exposed brick"
+    ],
+    "squareFeet": 600,
+    "available": "2024-03-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-067",
+    "title": "Family Home 3-BR in West Roxbury",
+    "price": 2400,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "678 Centre St, West Roxbury",
+      "latitude": 42.279876,
+      "longitude": -71.159234,
+      "neighborhood": "west roxbury"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "yard",
+      "laundry",
+      "dishwasher"
+    ],
+    "squareFeet": 1500,
+    "available": "2024-02-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-068",
+    "title": "Modern 1-BR in Medford",
+    "price": 2200,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "345 Main St, Medford",
+      "latitude": 42.423456,
+      "longitude": -71.106789,
+      "neighborhood": "medford"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "laundry",
+      "near Tufts"
+    ],
+    "squareFeet": 700,
+    "available": "2024-03-05",
+    "photos": [
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-069",
+    "title": "Luxury 2-BR in Theater District",
+    "price": 5100,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "234 Washington St, Theater District",
+      "latitude": 42.352345,
+      "longitude": -71.063789,
+      "neighborhood": "theater district"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "concierge",
+      "gym",
+      "rooftop",
+      "valet parking",
+      "doorman"
+    ],
+    "squareFeet": 1300,
+    "available": "2024-04-10",
+    "photos": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-070",
+    "title": "Converted Church 2-BR in South End",
+    "price": 3700,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "456 Shawmut Ave, South End",
+      "latitude": 42.339123,
+      "longitude": -71.071234,
+      "neighborhood": "south end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "high ceilings",
+      "stained glass",
+      "unique architecture"
+    ],
+    "squareFeet": 1250,
+    "available": "2024-03-18",
+    "photos": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-071",
+    "title": "Student 3-BR near Harvard",
+    "price": 4500,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "789 Harvard St, Cambridge",
+      "latitude": 42.371234,
+      "longitude": -71.118765,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "near Harvard",
+      "laundry",
+      "study room"
+    ],
+    "squareFeet": 1350,
+    "available": "2024-01-25",
+    "photos": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-072",
+    "title": "Micro Studio in Bay Village",
+    "price": 1800,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "23 Melrose St, Bay Village",
+      "latitude": 42.348234,
+      "longitude": -71.070876,
+      "neighborhood": "bay village"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "historic district",
+      "near common"
+    ],
+    "squareFeet": 350,
+    "available": "2024-02-08",
+    "photos": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-073",
+    "title": "Spacious 4-BR in Brookline",
+    "price": 4800,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "location": {
+      "address": "345 Beacon St, Brookline",
+      "latitude": 42.346789,
+      "longitude": -71.121876,
+      "neighborhood": "brookline"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "laundry",
+      "dishwasher",
+      "near green line"
+    ],
+    "squareFeet": 2000,
+    "available": "2024-03-25",
+    "photos": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-074",
+    "title": "Loft 1-BR in Leather District",
+    "price": 3100,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "456 Lincoln St, Leather District",
+      "latitude": 42.350876,
+      "longitude": -71.055234,
+      "neighborhood": "leather district"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "high ceilings",
+      "exposed brick",
+      "hardwood floors"
+    ],
+    "squareFeet": 850,
+    "available": "2024-02-12",
+    "photos": [
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-075",
+    "title": "Modern 3-BR in East Cambridge",
+    "price": 3600,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "678 Cambridge St, Cambridge",
+      "latitude": 42.366234,
+      "longitude": -71.082345,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "gym",
+      "rooftop",
+      "dishwasher"
+    ],
+    "squareFeet": 1550,
+    "available": "2024-03-22",
+    "photos": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-076",
+    "title": "Duplex 2-BR in South Boston",
+    "price": 2800,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "234 E Broadway, South Boston",
+      "latitude": 42.335678,
+      "longitude": -71.046789,
+      "neighborhood": "south boston"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "yard",
+      "laundry"
+    ],
+    "squareFeet": 1100,
+    "available": "2024-02-28",
+    "photos": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-077",
+    "title": "Victorian 1-BR in Cambridge",
+    "price": 2500,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "567 Brattle St, Cambridge",
+      "latitude": 42.373456,
+      "longitude": -71.124567,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "historic charm",
+      "fireplace",
+      "hardwood floors"
+    ],
+    "squareFeet": 750,
+    "available": "2024-03-08",
+    "photos": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-078",
+    "title": "Affordable 2-BR in Hyde Park",
+    "price": 1900,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "789 Hyde Park Ave, Hyde Park",
+      "latitude": 42.254321,
+      "longitude": -71.125678,
+      "neighborhood": "hyde park"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "yard",
+      "laundry"
+    ],
+    "squareFeet": 950,
+    "available": "2024-01-30",
+    "photos": [
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-079",
+    "title": "New Construction 2-BR in Assembly",
+    "price": 3800,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "456 Assembly Row, Somerville",
+      "latitude": 42.392876,
+      "longitude": -71.076543,
+      "neighborhood": "somerville"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "garage",
+      "gym",
+      "rooftop",
+      "concierge",
+      "balcony"
+    ],
+    "squareFeet": 1250,
+    "available": "2024-04-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-080",
+    "title": "Riverside 1-BR in Cambridge",
+    "price": 2900,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "123 Memorial Drive, Cambridge",
+      "latitude": 42.365432,
+      "longitude": -71.103456,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "river view",
+      "gym",
+      "near MIT"
+    ],
+    "squareFeet": 800,
+    "available": "2024-02-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-081",
+    "title": "Penthouse 3-BR in Millennium Place",
+    "price": 8500,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "location": {
+      "address": "1 Avery St, Downtown Crossing",
+      "latitude": 42.356789,
+      "longitude": -71.059234,
+      "neighborhood": "downtown crossing"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "city view",
+      "concierge",
+      "valet parking",
+      "spa",
+      "wine cellar"
+    ],
+    "squareFeet": 2500,
+    "available": "2024-05-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-082",
+    "title": "Classic 1-BR in Copley Square",
+    "price": 3400,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "567 Boylston St, Back Bay",
+      "latitude": 42.349567,
+      "longitude": -71.077123,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "near library",
+      "doorman",
+      "laundry"
+    ],
+    "squareFeet": 700,
+    "available": "2024-02-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-083",
+    "title": "Affordable Studio in Roxbury",
+    "price": 1400,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "234 Warren St, Roxbury",
+      "latitude": 42.321234,
+      "longitude": -71.088765,
+      "neighborhood": "roxbury"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "laundry",
+      "near orange line"
+    ],
+    "squareFeet": 400,
+    "available": "2024-01-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-084",
+    "title": "Modern 2-BR in Union Square",
+    "price": 3200,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "345 Washington St, Somerville",
+      "latitude": 42.379876,
+      "longitude": -71.095432,
+      "neighborhood": "somerville"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "dishwasher",
+      "balcony",
+      "near green line"
+    ],
+    "squareFeet": 1150,
+    "available": "2024-03-12",
+    "photos": [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-085",
+    "title": "Corner Unit 1-BR in North Station",
+    "price": 3600,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "234 Causeway St, North Station",
+      "latitude": 42.366123,
+      "longitude": -71.062876,
+      "neighborhood": "north station"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "garage",
+      "gym",
+      "concierge",
+      "near TD Garden"
+    ],
+    "squareFeet": 750,
+    "available": "2024-02-25",
+    "photos": [
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-086",
+    "title": "Garden Studio in Fenway",
+    "price": 2100,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "567 Park Drive, Fenway",
+      "latitude": 42.343456,
+      "longitude": -71.100234,
+      "neighborhood": "fenway"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "garden access",
+      "near Fenway Park",
+      "laundry"
+    ],
+    "squareFeet": 500,
+    "available": "2024-03-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-087",
+    "title": "Luxury 2-BR in Newbury Street",
+    "price": 5800,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "234 Newbury St, Back Bay",
+      "latitude": 42.348765,
+      "longitude": -71.076543,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "shopping district",
+      "doorman",
+      "balcony",
+      "fireplace"
+    ],
+    "squareFeet": 1300,
+    "available": "2024-04-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-088",
+    "title": "Affordable 3-BR in Roxbury Crossing",
+    "price": 2200,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "location": {
+      "address": "345 Tremont St, Roxbury",
+      "latitude": 42.331234,
+      "longitude": -71.095678,
+      "neighborhood": "roxbury"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "laundry",
+      "near orange line"
+    ],
+    "squareFeet": 1200,
+    "available": "2024-02-10",
+    "photos": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-089",
+    "title": "Modern 1-BR in Lechmere",
+    "price": 2700,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "456 First St, Cambridge",
+      "latitude": 42.370876,
+      "longitude": -71.077234,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "gym",
+      "near green line",
+      "balcony"
+    ],
+    "squareFeet": 750,
+    "available": "2024-03-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-090",
+    "title": "Luxury 3-BR in Seaport District",
+    "price": 6200,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "location": {
+      "address": "100 Northern Ave, Seaport",
+      "latitude": 42.352123,
+      "longitude": -71.043876,
+      "neighborhood": "seaport"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "harbor view",
+      "concierge",
+      "valet parking",
+      "spa",
+      "rooftop"
+    ],
+    "squareFeet": 2000,
+    "available": "2024-04-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-091",
+    "title": "Converted Factory 2-BR in Fort Point",
+    "price": 3500,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "678 Congress St, Fort Point",
+      "latitude": 42.349234,
+      "longitude": -71.048123,
+      "neighborhood": "fort point"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "exposed brick",
+      "high ceilings",
+      "parking",
+      "artist community"
+    ],
+    "squareFeet": 1200,
+    "available": "2024-03-05",
+    "photos": [
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-092",
+    "title": "Student 2-BR near BU",
+    "price": 2800,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "789 Comm Ave, Allston",
+      "latitude": 42.350123,
+      "longitude": -71.126789,
+      "neighborhood": "allston"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "near BU",
+      "laundry",
+      "study room"
+    ],
+    "squareFeet": 900,
+    "available": "2024-01-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-093",
+    "title": "Historic 1-BR in Louisburg Square",
+    "price": 4200,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "12 Louisburg Square, Beacon Hill",
+      "latitude": 42.358123,
+      "longitude": -71.068765,
+      "neighborhood": "beacon hill"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "historic district",
+      "fireplace",
+      "hardwood floors"
+    ],
+    "squareFeet": 650,
+    "available": "2024-04-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-094",
+    "title": "Family 4-BR in Newton",
+    "price": 4000,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "location": {
+      "address": "456 Centre St, Newton",
+      "latitude": 42.337123,
+      "longitude": -71.192876,
+      "neighborhood": "newton"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "yard",
+      "laundry",
+      "dishwasher",
+      "quiet neighborhood"
+    ],
+    "squareFeet": 1800,
+    "available": "2024-03-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-095",
+    "title": "Trendy 2-BR in Inman Square",
+    "price": 3100,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "567 Cambridge St, Cambridge",
+      "latitude": 42.376543,
+      "longitude": -71.099876,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "near restaurants",
+      "laundry",
+      "bike storage"
+    ],
+    "squareFeet": 1000,
+    "available": "2024-02-28",
+    "photos": [
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-096",
+    "title": "Luxury Studio in One Dalton",
+    "price": 3800,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "1 Dalton St, Back Bay",
+      "latitude": 42.348234,
+      "longitude": -71.082345,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "city view",
+      "concierge",
+      "spa",
+      "valet parking",
+      "sky lounge"
+    ],
+    "squareFeet": 650,
+    "available": "2024-04-08",
+    "photos": [
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-097",
+    "title": "Converted Warehouse 3-BR in Somerville",
+    "price": 3400,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "789 Inner Belt Rd, Somerville",
+      "latitude": 42.383456,
+      "longitude": -71.084567,
+      "neighborhood": "somerville"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "exposed brick",
+      "high ceilings",
+      "artist space"
+    ],
+    "squareFeet": 1500,
+    "available": "2024-03-18",
+    "photos": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-098",
+    "title": "Corner 2-BR in Government Center",
+    "price": 4100,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "345 Court St, Government Center",
+      "latitude": 42.359876,
+      "longitude": -71.059234,
+      "neighborhood": "government center"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "garage",
+      "doorman",
+      "near T",
+      "city view"
+    ],
+    "squareFeet": 1200,
+    "available": "2024-03-25",
+    "photos": [
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-099",
+    "title": "Penthouse 2-BR in Prudential Tower",
+    "price": 7800,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "800 Boylston St, Back Bay",
+      "latitude": 42.347876,
+      "longitude": -71.081567,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "city view",
+      "concierge",
+      "valet parking",
+      "spa",
+      "sky deck"
+    ],
+    "squareFeet": 1600,
+    "available": "2024-05-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-100",
+    "title": "Historic 3-BR in Commonwealth Avenue",
+    "price": 5200,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "567 Commonwealth Ave, Back Bay",
+      "latitude": 42.349234,
+      "longitude": -71.078123,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "historic brownstone",
+      "fireplace",
+      "hardwood floors",
+      "high ceilings"
+    ],
+    "squareFeet": 1700,
+    "available": "2024-04-10",
+    "photos": [
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-026",
+    "title": "Sunny 0-BR in Seaport",
+    "price": 1068,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "location": {
+      "address": "460 Boylston St, Seaport",
+      "latitude": 42.342877,
+      "longitude": -71.054669,
+      "neighborhood": "seaport"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "study room",
+      "garage",
+      "yard"
+    ],
+    "squareFeet": 973,
+    "available": "2024-03-29",
+    "photos": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-027",
+    "title": "Cozy 0-BR in Seaport",
+    "price": 1112,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "location": {
+      "address": "731 Commonwealth Ave, Seaport",
+      "latitude": 42.34655,
+      "longitude": -71.04871,
+      "neighborhood": "seaport"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "laundry",
+      "doorman",
+      "elevator",
+      "fireplace",
+      "bike storage",
+      "yard"
+    ],
+    "squareFeet": 445,
+    "available": "2024-01-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-028",
+    "title": "Modern 0-BR in South End",
+    "price": 1904,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "293 Commonwealth Ave, South End",
+      "latitude": 42.365961,
+      "longitude": -71.047765,
+      "neighborhood": "south end"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "central air",
+      "garage",
+      "study room",
+      "gym",
+      "laundry",
+      "bike storage"
+    ],
+    "squareFeet": 883,
+    "available": "2024-02-26",
+    "photos": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-029",
+    "title": "Elegant 0-BR in South End",
+    "price": 2259,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "279 Washington St, South End",
+      "latitude": 42.352949,
+      "longitude": -71.078347,
+      "neighborhood": "south end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "bike storage",
+      "balcony",
+      "elevator"
+    ],
+    "squareFeet": 401,
+    "available": "2024-02-27",
+    "photos": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-030",
+    "title": "Modern 2-BR in Seaport",
+    "price": 3509,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "891 Commonwealth Ave, Seaport",
+      "latitude": 42.37657,
+      "longitude": -71.071401,
+      "neighborhood": "seaport"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "doorman",
+      "central air",
+      "dishwasher",
+      "study room",
+      "balcony"
+    ],
+    "squareFeet": 1056,
+    "available": "2024-02-13",
+    "photos": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-031",
+    "title": "Luxury 2-BR in Back Bay",
+    "price": 5200,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "88 Exeter St, Back Bay",
+      "latitude": 42.349876,
+      "longitude": -71.078901,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "concierge",
+      "rooftop",
+      "pool",
+      "gym",
+      "valet parking"
+    ],
+    "squareFeet": 1450,
+    "available": "2024-04-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-032",
+    "title": "Historic 1-BR in Beacon Hill",
+    "price": 3800,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "45 Chestnut St, Beacon Hill",
+      "latitude": 42.358234,
+      "longitude": -71.068452,
+      "neighborhood": "beacon hill"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "fireplace",
+      "hardwood floors",
+      "exposed brick"
+    ],
+    "squareFeet": 850,
+    "available": "2024-03-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-033",
+    "title": "Student-Friendly Studio in Allston",
+    "price": 1200,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "123 Harvard Ave, Allston",
+      "latitude": 42.352189,
+      "longitude": -71.131476,
+      "neighborhood": "allston"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "laundry",
+      "bike storage"
+    ],
+    "squareFeet": 420,
+    "available": "2024-02-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-034",
+    "title": "Modern 2-BR in Somerville",
+    "price": 2900,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "456 Davis Square, Somerville",
+      "latitude": 42.396732,
+      "longitude": -71.121843,
+      "neighborhood": "somerville"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "dishwasher",
+      "laundry",
+      "balcony",
+      "central air"
+    ],
+    "squareFeet": 1100,
+    "available": "2024-03-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-035",
+    "title": "Luxury Studio in Seaport",
+    "price": 2800,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "100 Pier 4 Blvd, Seaport",
+      "latitude": 42.348756,
+      "longitude": -71.042134,
+      "neighborhood": "seaport"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "concierge",
+      "gym",
+      "rooftop",
+      "harbor view",
+      "valet parking"
+    ],
+    "squareFeet": 650,
+    "available": "2024-02-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-036",
+    "title": "Charming 1-BR in Jamaica Plain",
+    "price": 2100,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "789 Centre St, Jamaica Plain",
+      "latitude": 42.314567,
+      "longitude": -71.113456,
+      "neighborhood": "jamaica plain"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "laundry",
+      "bike storage",
+      "yard"
+    ],
+    "squareFeet": 750,
+    "available": "2024-03-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-037",
+    "title": "Spacious 3-BR in Brighton",
+    "price": 3200,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "234 Washington St, Brighton",
+      "latitude": 42.348923,
+      "longitude": -71.157654,
+      "neighborhood": "brighton"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "laundry",
+      "dishwasher",
+      "balcony"
+    ],
+    "squareFeet": 1600,
+    "available": "2024-02-10",
+    "photos": [
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-038",
+    "title": "Trendy Loft in South End",
+    "price": 3600,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "567 Tremont St, South End",
+      "latitude": 42.342234,
+      "longitude": -71.069876,
+      "neighborhood": "south end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "exposed brick",
+      "high ceilings",
+      "hardwood floors"
+    ],
+    "squareFeet": 900,
+    "available": "2024-03-05",
+    "photos": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-039",
+    "title": "Waterfront 2-BR in East Boston",
+    "price": 2700,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "890 Marginal St, East Boston",
+      "latitude": 42.368745,
+      "longitude": -71.030123,
+      "neighborhood": "east boston"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "water view",
+      "parking",
+      "balcony",
+      "gym"
+    ],
+    "squareFeet": 1250,
+    "available": "2024-02-20",
+    "photos": [
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-040",
+    "title": "University Adjacent 3-BR in Cambridge",
+    "price": 4200,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "location": {
+      "address": "789 Harvard St, Cambridge",
+      "latitude": 42.374567,
+      "longitude": -71.120345,
+      "neighborhood": "cambridge"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "study room",
+      "wifi included",
+      "near T"
+    ],
+    "squareFeet": 1400,
+    "available": "2024-01-30",
+    "photos": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-041",
+    "title": "Penthouse 2-BR in Financial District",
+    "price": 6500,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "1 Financial Center, Financial District",
+      "latitude": 42.356789,
+      "longitude": -71.055432,
+      "neighborhood": "financial district"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "city view",
+      "concierge",
+      "valet parking",
+      "rooftop",
+      "gym"
+    ],
+    "squareFeet": 1800,
+    "available": "2024-04-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-042",
+    "title": "Cozy 1-BR in Charlestown",
+    "price": 2400,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "345 Bunker Hill St, Charlestown",
+      "latitude": 42.376543,
+      "longitude": -71.064321,
+      "neighborhood": "charlestown"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "laundry",
+      "harbor view"
+    ],
+    "squareFeet": 800,
+    "available": "2024-02-25",
+    "photos": [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-043",
+    "title": "Modern Studio in Financial District",
+    "price": 2200,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "location": {
+      "address": "75 State St, Financial District",
+      "latitude": 42.358912,
+      "longitude": -71.057234,
+      "neighborhood": "financial district"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "gym",
+      "rooftop",
+      "doorman"
+    ],
+    "squareFeet": 550,
+    "available": "2024-01-25",
+    "photos": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-044",
+    "title": "Garden Level 2-BR in Jamaica Plain",
+    "price": 2350,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "456 South St, Jamaica Plain",
+      "latitude": 42.319876,
+      "longitude": -71.108765,
+      "neighborhood": "jamaica plain"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "private garden",
+      "parking",
+      "laundry",
+      "bike storage"
+    ],
+    "squareFeet": 1000,
+    "available": "2024-03-10",
+    "photos": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-045",
+    "title": "Industrial Loft in South End",
+    "price": 4100,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "location": {
+      "address": "890 Harrison Ave, South End",
+      "latitude": 42.339876,
+      "longitude": -71.065432,
+      "neighborhood": "south end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": true,
+    "amenities": [
+      "exposed brick",
+      "high ceilings",
+      "parking",
+      "dishwasher"
+    ],
+    "squareFeet": 1350,
+    "available": "2024-04-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-046",
+    "title": "Converted Warehouse in Fort Point",
+    "price": 3900,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "234 A St, Fort Point",
+      "latitude": 42.348123,
+      "longitude": -71.049876,
+      "neighborhood": "fort point"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "high ceilings",
+      "exposed brick",
+      "parking",
+      "gym"
+    ],
+    "squareFeet": 950,
+    "available": "2024-02-08",
+    "photos": [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-047",
+    "title": "Brownstone 2-BR in Back Bay",
+    "price": 4500,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "567 Marlborough St, Back Bay",
+      "latitude": 42.351234,
+      "longitude": -71.078654,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "fireplace",
+      "hardwood floors",
+      "laundry"
+    ],
+    "squareFeet": 1200,
+    "available": "2024-03-25",
+    "photos": [
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-048",
+    "title": "Affordable 3-BR in Mattapan",
+    "price": 1800,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "location": {
+      "address": "678 Blue Hill Ave, Mattapan",
+      "latitude": 42.267891,
+      "longitude": -71.093456,
+      "neighborhood": "mattapan"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "laundry",
+      "yard"
+    ],
+    "squareFeet": 1300,
+    "available": "2024-02-05",
+    "photos": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-049",
+    "title": "Modern 1-BR in Mission Hill",
+    "price": 2300,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "345 Huntington Ave, Mission Hill",
+      "latitude": 42.333456,
+      "longitude": -71.108765,
+      "neighborhood": "mission hill"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "laundry",
+      "bike storage",
+      "near hospitals"
+    ],
+    "squareFeet": 700,
+    "available": "2024-03-12",
+    "photos": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-050",
+    "title": "Luxury 3-BR in Prudential Center",
+    "price": 7200,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "location": {
+      "address": "111 Huntington Ave, Back Bay",
+      "latitude": 42.347234,
+      "longitude": -71.081234,
+      "neighborhood": "back bay"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "concierge",
+      "pool",
+      "gym",
+      "valet parking",
+      "city view",
+      "spa"
+    ],
+    "squareFeet": 2200,
+    "available": "2024-04-10",
+    "photos": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-051",
+    "title": "Historic 2-BR in North End",
+    "price": 3400,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "location": {
+      "address": "123 Hanover St, North End",
+      "latitude": 42.364567,
+      "longitude": -71.054321,
+      "neighborhood": "north end"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "exposed brick",
+      "near restaurants",
+      "historic charm"
+    ],
+    "squareFeet": 1000,
+    "available": "2024-02-18",
+    "photos": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-052",
+    "title": "Family-Friendly 4-BR in Roslindale",
+    "price": 2800,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "location": {
+      "address": "456 Washington St, Roslindale",
+      "latitude": 42.284567,
+      "longitude": -71.127654,
+      "neighborhood": "roslindale"
+    },
+    "petFriendly": true,
+    "parkingAvailable": true,
+    "amenities": [
+      "parking",
+      "yard",
+      "laundry",
+      "dishwasher"
+    ],
+    "squareFeet": 1900,
+    "available": "2024-03-01",
+    "photos": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-053",
+    "title": "Artist Loft in Fort Point",
+    "price": 3200,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "location": {
+      "address": "567 Summer St, Fort Point",
+      "latitude": 42.349876,
+      "longitude": -71.048765,
+      "neighborhood": "fort point"
+    },
+    "petFriendly": true,
+    "parkingAvailable": false,
+    "amenities": [
+      "high ceilings",
+      "exposed brick",
+      "art studio space"
+    ],
+    "squareFeet": 1100,
+    "available": "2024-02-12",
+    "photos": [
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800"
+    ]
+  },
+  {
+    "id": "apt-bos-054",
+    "title": "Student Housing 4-BR in Allston",
+    "price": 3600,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "location": {
+      "address": "789 Commonwealth Ave, Allston",
+      "latitude": 42.351234,
+      "longitude": -71.134567,
+      "neighborhood": "allston"
+    },
+    "petFriendly": false,
+    "parkingAvailable": false,
+    "amenities": [
+      "laundry",
+      "study room",
+      "bike storage"
+    ],
+    "squareFeet": 1500,
+    "available": "2024-01-15",
+    "photos": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800"
+    ]
+  }
+]
