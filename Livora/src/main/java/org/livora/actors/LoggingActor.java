@@ -64,6 +64,12 @@ public class LoggingActor extends AbstractBehavior<Command> {
         long msgId = messageCounter.incrementAndGet();
         String requesterPath = searchLog.requester.path().toString();
 
+        // FIX: Add null check for criteria
+        if (searchLog.criteria == null) {
+            getContext().getLog().error("SearchCriteria is null in LogSearchPerformed message");
+            return this;
+        }
+
         // This demonstrates FORWARD pattern handling - we can see the original
         // requester information preserved in the message
         getContext().getLog().info(
@@ -90,6 +96,12 @@ public class LoggingActor extends AbstractBehavior<Command> {
     }
 
     private void logSearchMetrics(LoggingMessages.LogSearchPerformed searchLog, long msgId) {
+        // FIX: Add null check for criteria
+        if (searchLog.criteria == null) {
+            getContext().getLog().error("Cannot log search metrics - criteria is null");
+            return;
+        }
+
         // Extract search criteria for metrics
         StringBuilder criteriaBuilder = new StringBuilder();
 

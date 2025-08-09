@@ -1,6 +1,7 @@
 package org.livora.messages;
 
 import akka.actor.typed.ActorRef;
+import org.livora.actors.VectorSearchActor;
 import org.livora.models.Apartment;
 import org.livora.models.SearchCriteria;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -45,8 +46,8 @@ public class UserRequestMessages {
         public final QueryParserMessages.QueryParsed queryParsed;
         public final SearchRequest originalRequest;
 
-        public ProcessParsedQuery(QueryParserMessages.QueryParsed queryParsed, 
-                                SearchRequest originalRequest) {
+        public ProcessParsedQuery(QueryParserMessages.QueryParsed queryParsed,
+                                  SearchRequest originalRequest) {
             this.queryParsed = queryParsed;
             this.originalRequest = originalRequest;
         }
@@ -54,11 +55,11 @@ public class UserRequestMessages {
 
     public static final class QueryParsingFailed implements Command {
         public final SearchRequest originalRequest;
-        public final Throwable error;
+//        public final Throwable error;
 
-        public QueryParsingFailed(SearchRequest originalRequest, Throwable error) {
+        public QueryParsingFailed(SearchRequest originalRequest) {
             this.originalRequest = originalRequest;
-            this.error = error;
+//            this.error = error;
         }
     }
 
@@ -75,6 +76,19 @@ public class UserRequestMessages {
             this.totalResults = totalResults;
             this.searchTimeMs = searchTimeMs;
             this.confidence = confidence;
+        }
+    }
+
+    public static final class VectorSearchComplete implements Command {
+        public final VectorSearchActor.SearchResults vectorResults;
+        public final String sessionId;
+
+        @JsonCreator
+        public VectorSearchComplete(
+                @JsonProperty("vectorResults") VectorSearchActor.SearchResults vectorResults,
+                @JsonProperty("sessionId") String sessionId) {
+            this.vectorResults = vectorResults;
+            this.sessionId = sessionId;
         }
     }
 }

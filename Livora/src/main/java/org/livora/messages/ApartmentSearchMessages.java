@@ -1,6 +1,7 @@
 package org.livora.messages;
 
 import akka.actor.typed.ActorRef;
+import org.livora.actors.VectorSearchActor;
 import org.livora.models.Apartment;
 import org.livora.models.SearchCriteria;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -32,6 +33,22 @@ public class ApartmentSearchMessages {
                 @JsonProperty("totalMatches") int totalMatches) {
             this.apartments = apartments;
             this.totalMatches = totalMatches;
+        }
+    }
+
+    public static final class FindApartmentsHybrid implements Command {
+        public final SearchCriteria criteria;
+        public final VectorSearchActor.SearchResults vectorResults;
+        public final ActorRef<ApartmentsFound> replyTo;
+
+        @JsonCreator
+        public FindApartmentsHybrid(
+                @JsonProperty("criteria") SearchCriteria criteria,
+                @JsonProperty("vectorResults") VectorSearchActor.SearchResults vectorResults,
+                @JsonProperty("replyTo") ActorRef<ApartmentsFound> replyTo) {
+            this.criteria = criteria;
+            this.vectorResults = vectorResults;
+            this.replyTo = replyTo;
         }
     }
 }

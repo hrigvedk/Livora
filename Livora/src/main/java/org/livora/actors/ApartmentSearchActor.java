@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.time.Instant;
 
@@ -32,7 +33,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
     private ApartmentSearchActor(ActorContext<Command> context) {
         super(context);
         this.objectMapper = new ObjectMapper();
-        // Configure ObjectMapper to ignore unknown properties
         this.objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         this.logger = context.spawn(LoggingActor.create(), "searchLogger");
 
@@ -47,6 +47,7 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
     public Receive<Command> createReceive() {
         return newReceiveBuilder()
                 .onMessage(ApartmentSearchMessages.FindApartments.class, this::onFindApartments)
+                .onMessage(ApartmentSearchMessages.FindApartmentsHybrid.class, this::onFindApartmentsHybrid)
                 .build();
     }
 
@@ -60,7 +61,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
                 request.criteria.getMaxPrice().orElse(null),
                 request.criteria.getLocation().orElse("any"));
 
-        // Perform the search with filtering
         List<Apartment> results = searchApartments(request.criteria);
 
         long searchTime = System.currentTimeMillis() - startTime;
@@ -90,14 +90,278 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
         return this;
     }
 
+    private Behavior<Command> onFindApartmentsHybrid(ApartmentSearchMessages.FindApartmentsHybrid request) {
+        getContext().getLog().info("Performing hybrid search with {} vector results",
+                request.vectorResults.apartments.size());
+
+        long startTime = System.currentTimeMillis();
+
+        try {
+            // STEP 1: Get candidates from vector search (semantic similarity)
+            List<VectorSearchActor.ScoredApartment> vectorCandidates = request.vectorResults.apartments;
+
+            // STEP 2: Apply structured filters to vector candidates
+            List<Apartment> filteredCandidates = vectorCandidates.stream()
+                    .map(scored -> scored.apartment)
+                    .filter(apt -> matchesCriteria(apt, request.criteria))
+                    .collect(Collectors.toList());
+
+            getContext().getLog().info("After filtering {} vector candidates, {} remain",
+                    vectorCandidates.size(), filteredCandidates.size());
+
+            // STEP 3: If filtered results are too few, expand search
+            List<Apartment> finalResults;
+            if (filteredCandidates.size() < 5) {
+                getContext().getLog().info("Too few filtered results, expanding search with relaxed criteria");
+                finalResults = performExpandedSearch(request.criteria, vectorCandidates);
+            } else {
+                finalResults = filteredCandidates;
+            }
+
+            // STEP 4: Re-rank results using hybrid scoring
+            finalResults = rerankWithHybridScoring(finalResults, vectorCandidates, request.criteria);
+
+            // STEP 5: Limit results
+            finalResults = finalResults.stream().limit(50).collect(Collectors.toList());
+
+            long searchTime = System.currentTimeMillis() - startTime;
+            getContext().getLog().info("Hybrid search found {} apartments in {}ms",
+                    finalResults.size(), searchTime);
+
+            // Log search metrics (simplified version)
+            getContext().getLog().info("Search completed: {} results for criteria with {} bedrooms, max price {}",
+                    finalResults.size(),
+                    request.criteria.getBedrooms().orElse(-1),
+                    request.criteria.getMaxPrice().orElse(-1));
+
+            request.replyTo.tell(new ApartmentSearchMessages.ApartmentsFound(
+                    finalResults,
+                    finalResults.size()
+            ));
+
+        } catch (Exception e) {
+            getContext().getLog().error("Hybrid search failed", e);
+            request.replyTo.tell(new ApartmentSearchMessages.ApartmentsFound(List.of(), 0));
+        }
+
+        return this;
+    }
+
+    private List<Apartment> performExpandedSearch(
+            SearchCriteria criteria,
+            List<VectorSearchActor.ScoredApartment> vectorCandidates) {
+
+        getContext().getLog().info("Performing expanded search with relaxed criteria");
+
+        // Create relaxed criteria
+        SearchCriteria relaxedCriteria = createRelaxedCriteria(criteria);
+
+        // First try vector candidates with relaxed criteria
+        List<Apartment> relaxedResults = vectorCandidates.stream()
+                .map(scored -> scored.apartment)
+                .filter(apt -> matchesCriteria(apt, relaxedCriteria))
+                .collect(Collectors.toList());
+
+        // If still not enough, fall back to your existing apartment list
+        if (relaxedResults.size() < 3) {
+            getContext().getLog().info("Vector search insufficient, searching full apartment database");
+            // Use your existing apartment loading logic here
+            return loadApartmentData().stream()
+                    .filter(apt -> matchesCriteria(apt, relaxedCriteria))
+                    .limit(80)
+                    .collect(Collectors.toList());
+        }
+
+        return relaxedResults;
+    }
+
+    private SearchCriteria createRelaxedCriteria(SearchCriteria original) {
+        // Relax price constraints by 25%
+        Integer relaxedMaxPrice = original.getMaxPrice()
+                .map(price -> (int) (price * 1.25))
+                .orElse(null);
+
+        Integer relaxedMinPrice = original.getMinPrice()
+                .map(price -> (int) (price * 0.75))
+                .orElse(null);
+
+        // Keep other criteria the same but make location more flexible
+        String relaxedLocation = original.getLocation().orElse(null);
+
+        return new SearchCriteria(
+                relaxedMinPrice,
+                relaxedMaxPrice,
+                original.getBedrooms().orElse(null),
+                original.getBathrooms().orElse(null),
+                original.getPetFriendly().orElse(null),
+                original.getParking().orElse(null),
+                relaxedLocation,
+                original.getAmenities(),
+                original.getProximity().orElse(null)
+        );
+    }
+
+    private List<Apartment> rerankWithHybridScoring(
+            List<Apartment> apartments,
+            List<VectorSearchActor.ScoredApartment> vectorCandidates,
+            SearchCriteria criteria) {
+
+        getContext().getLog().info("Re-ranking {} apartments with hybrid scoring", apartments.size());
+
+        // Create a map of apartment ID to vector score
+        Map<String, Float> vectorScores = vectorCandidates.stream()
+                .collect(Collectors.toMap(
+                        scored -> scored.apartment.getId(),
+                        scored -> scored.score
+                ));
+
+        // Score each apartment
+        return apartments.stream()
+                .map(apt -> {
+                    double totalScore = calculateHybridScore(apt, criteria, vectorScores);
+                    return new ScoredApartment(apt, totalScore);
+                })
+                .sorted((a, b) -> Double.compare(b.score, a.score)) // Sort by score descending
+                .map(scored -> scored.apartment)
+                .collect(Collectors.toList());
+    }
+
+    private double calculateHybridScore(
+            Apartment apartment,
+            SearchCriteria criteria,
+            Map<String, Float> vectorScores) {
+
+        double score = 0.0;
+
+        // Vector similarity score (40% weight)
+        float vectorScore = vectorScores.getOrDefault(apartment.getId(), 0.0f);
+        score += vectorScore * 0.4;
+
+        // Structured criteria matching (60% weight)
+        double criteriaScore = 0.0;
+        int matchingCriteria = 0;
+        int totalCriteria = 0;
+
+        // Price matching
+        if (criteria.getMaxPrice().isPresent()) {
+            totalCriteria++;
+            if (apartment.getPrice() <= criteria.getMaxPrice().get()) {
+                matchingCriteria++;
+                // Bonus for being well under budget
+                double priceRatio = (double) apartment.getPrice() / criteria.getMaxPrice().get();
+                criteriaScore += Math.max(0, 1.5 - priceRatio); // Bonus for cheaper apartments
+            }
+        }
+
+        // Bedroom matching
+        if (criteria.getBedrooms().isPresent()) {
+            totalCriteria++;
+            if (apartment.getBedrooms() == criteria.getBedrooms().get()) {
+                matchingCriteria++;
+                criteriaScore += 1.0;
+            }
+        }
+
+        // Pet-friendly matching
+        if (criteria.getPetFriendly().isPresent()) {
+            totalCriteria++;
+            if (apartment.isPetFriendly() == criteria.getPetFriendly().get()) {
+                matchingCriteria++;
+                criteriaScore += 1.0;
+            }
+        }
+
+        // Parking matching
+        if (criteria.getParking().isPresent()) {
+            totalCriteria++;
+            if (apartment.isParkingAvailable() == criteria.getParking().get()) {
+                matchingCriteria++;
+                criteriaScore += 1.0;
+            }
+        }
+
+        // Location matching (fuzzy)
+        if (criteria.getLocation().isPresent()) {
+            totalCriteria++;
+            String targetLocation = criteria.getLocation().get().toLowerCase();
+            String aptNeighborhood = apartment.getLocation().getNeighborhood().toLowerCase();
+
+            if (aptNeighborhood.contains(targetLocation) || targetLocation.contains(aptNeighborhood)) {
+                matchingCriteria++;
+                criteriaScore += 1.0;
+            } else if (isNearbyNeighborhood(aptNeighborhood, targetLocation)) {
+                criteriaScore += 0.5; // Partial match for nearby areas
+            }
+        }
+
+        // Amenities matching
+        if (!criteria.getAmenities().isEmpty()) {
+            totalCriteria++;
+            long matchingAmenities = criteria.getAmenities().stream()
+                    .mapToLong(amenity -> apartment.getAmenities().contains(amenity) ? 1 : 0)
+                    .sum();
+
+            if (matchingAmenities > 0) {
+                matchingCriteria++;
+                criteriaScore += (double) matchingAmenities / criteria.getAmenities().size();
+            }
+        }
+
+        // Normalize criteria score
+        if (totalCriteria > 0) {
+            criteriaScore = criteriaScore / totalCriteria;
+        }
+
+        score += criteriaScore * 0.6;
+
+        getContext().getLog().debug("Apartment {} scored: vector={}, criteria={}, total={}",
+                apartment.getId(), vectorScore, criteriaScore, score);
+
+        return score;
+    }
+
+    private boolean isNearbyNeighborhood(String neighborhood1, String neighborhood2) {
+        // Define nearby neighborhood relationships
+        Map<String, List<String>> nearbyMap = Map.of(
+                "downtown", List.of("financial district", "government center", "theater district"),
+                "back bay", List.of("south end", "copley", "newbury street"),
+                "cambridge", List.of("somerville", "porter square", "davis square"),
+                "south end", List.of("back bay", "roxbury"),
+                "seaport", List.of("fort point", "financial district"),
+                "beacon hill", List.of("north end", "downtown"),
+                "north end", List.of("beacon hill", "charlestown")
+        );
+
+        return nearbyMap.getOrDefault(neighborhood1, List.of()).contains(neighborhood2) ||
+                nearbyMap.getOrDefault(neighborhood2, List.of()).contains(neighborhood1);
+    }
+
+    // Helper class for scoring
+    private static class ScoredApartment {
+        public final Apartment apartment;
+        public final double score;
+
+        public ScoredApartment(Apartment apartment, double score) {
+            this.apartment = apartment;
+            this.score = score;
+        }
+    }
+
     private List<Apartment> searchApartments(SearchCriteria criteria) {
         return apartmentDatabase.stream()
                 .filter(apt -> matchesCriteria(apt, criteria))
-                .limit(50) // Limit results for performance
+                .limit(60) // Limit results for performance
                 .collect(Collectors.toList());
     }
 
     private boolean matchesCriteria(Apartment apartment, SearchCriteria criteria) {
+        // NEW: If criteria is completely empty (no filters), match all apartments
+        if (isEmptyCriteria(criteria)) {
+            return true;
+        }
+
+        // EXISTING: Apply filters only if they are specified
+
         // Price filtering
         if (criteria.getMinPrice().isPresent() && apartment.getPrice() < criteria.getMinPrice().get()) {
             return false;
@@ -143,14 +407,28 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
                     .map(String::toLowerCase)
                     .collect(Collectors.toList());
 
-            for (String requiredAmenity : criteria.getAmenities()) {
-                if (!aptAmenities.contains(requiredAmenity.toLowerCase())) {
+            for (String requestedAmenity : criteria.getAmenities()) {
+                boolean hasAmenity = aptAmenities.stream()
+                        .anyMatch(aptAmenity -> aptAmenity.contains(requestedAmenity.toLowerCase()));
+                if (!hasAmenity) {
                     return false;
                 }
             }
         }
 
         return true;
+    }
+
+    // NEW: Helper method to check if criteria is completely empty
+    private boolean isEmptyCriteria(SearchCriteria criteria) {
+        return criteria.getMinPrice().isEmpty() &&
+                criteria.getMaxPrice().isEmpty() &&
+                criteria.getBedrooms().isEmpty() &&
+                criteria.getBathrooms().isEmpty() &&
+                criteria.getPetFriendly().isEmpty() &&
+                criteria.getParking().isEmpty() &&
+                criteria.getLocation().isEmpty() &&
+                criteria.getAmenities().isEmpty();
     }
 
     private List<Apartment> loadApartmentData() {

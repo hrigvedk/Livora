@@ -54,6 +54,7 @@ public class RestApiRoutes {
                                         // API routes
                                         pathPrefix("api", () ->
                                                 route(
+                                                        // Search endpoint
                                                         path("search", () ->
                                                                 post(() ->
                                                                         entity(Jackson.unmarshaller(SearchRequestDTO.class), searchRequest -> {
@@ -88,6 +89,31 @@ public class RestApiRoutes {
                                                                             });
                                                                         })
                                                                 )
+                                                        ),
+
+                                                        path("apartments", () ->
+                                                                get(() -> {
+                                                                    system.log().info("REST API received request for all apartments");
+
+                                                                    String sessionId = UUID.randomUUID().toString();
+
+                                                                    // Use empty search query to get all apartments (will bypass vector search/parsing)
+                                                                    CompletionStage<UserRequestMessages.SearchResponse> responseFuture =
+                                                                            AskPattern.ask(
+                                                                                    userRequestActor,
+                                                                                    (ActorRef<UserRequestMessages.SearchResponse> replyTo) ->
+                                                                                            new UserRequestMessages.SearchRequest("", sessionId, replyTo),
+                                                                                    askTimeout,
+                                                                                    system.scheduler()
+                                                                            );
+
+                                                                    return onSuccess(responseFuture, response -> {
+                                                                        system.log().info("Returning {} apartments from database for session {}",
+                                                                                response.results.size(), response.sessionId);
+
+                                                                        return complete(StatusCodes.OK, response, Jackson.marshaller());
+                                                                    });
+                                                                })
                                                         ),
 
                                                         // Test endpoint for frontend debugging
@@ -166,6 +192,8 @@ public class RestApiRoutes {
         public void setQuery(String query) { this.query = query; }
         public void setSessionId(String sessionId) { this.sessionId = sessionId; }
     }
+
+
 
     public static class HealthResponse {
         private String status;
