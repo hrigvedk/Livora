@@ -43,8 +43,6 @@ import java.util.stream.Collectors;
 import java.time.Instant;
 
 public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Command> {
-
-    // Message definitions (keeping these the same)
     public interface Command extends org.livora.messages.Command {}
 
     public static final class IndexApartment implements Command {
@@ -612,6 +610,10 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                 .setBoolValue(apt.isParkingAvailable()).build());
         payload.put("squareFeet", Value.newBuilder()
                 .setIntegerValue(apt.getSquareFeet()).build());
+        payload.put("latitude", Value.newBuilder()
+                .setDoubleValue(apt.getLocation().getLatitude()).build());
+        payload.put("longitude", Value.newBuilder()
+                .setDoubleValue(apt.getLocation().getLongitude()).build());
 
         // Store amenities as comma-separated string
         if (!apt.getAmenities().isEmpty()) {
@@ -632,6 +634,11 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
             }
         }
 
+        double latitude = payload.containsKey("latitude") ?
+                payload.get("latitude").getDoubleValue() : 0.0;
+        double longitude = payload.containsKey("longitude") ?
+                payload.get("longitude").getDoubleValue() : 0.0;
+
         return new Apartment(
                 payload.get("id").getStringValue(),
                 payload.get("title").getStringValue(),
@@ -640,16 +647,16 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                 (int) payload.get("bathrooms").getIntegerValue(),
                 new Apartment.Location(
                         payload.get("address").getStringValue(),
-                        0.0, // We're not storing lat/lon in payload for simplicity
-                        0.0,
+                        latitude,
+                        longitude,
                         payload.get("neighborhood").getStringValue()
                 ),
                 payload.get("petFriendly").getBoolValue(),
                 payload.get("parkingAvailable").getBoolValue(),
                 amenities,
                 payload.containsKey("squareFeet") ? (int) payload.get("squareFeet").getIntegerValue() : 0,
-                "2024-01-01", // Default available date
-                List.of() // Default photos
+                "2024-01-01",
+                List.of()
         );
     }
 
@@ -659,7 +666,7 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                     .setCollectionName(QUERIES_COLLECTION)
                     .addAllVector(queryVector)
                     .setLimit(3)
-                    .setScoreThreshold(0.7f) // Only return highly similar queries
+                    .setScoreThreshold(0.7f)
                     .setWithPayload(WithPayloadSelector.newBuilder()
                             .setEnable(true)
                             .build())

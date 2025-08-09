@@ -6,19 +6,14 @@
     "bedrooms": 1,
     "bathrooms": 2,
     "location": {
-      "address": "147 Commonwealth Ave, Dorchester",
-      "latitude": 42.352469,
-      "longitude": -71.055088,
+      "address": "147 Dorchester Ave, Dorchester",
+      "latitude": 42.295000,
+      "longitude": -71.065000,
       "neighborhood": "dorchester"
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "balcony",
-      "dishwasher",
-      "laundry",
-      "gym"
-    ],
+    "amenities": ["balcony", "dishwasher", "laundry", "gym"],
     "squareFeet": 994,
     "available": "2024-02-28",
     "photos": [
@@ -34,19 +29,14 @@
     "bedrooms": 0,
     "bathrooms": 2,
     "location": {
-      "address": "392 Commonwealth Ave, Cambridge",
-      "latitude": 42.363456,
-      "longitude": -71.059983,
+      "address": "392 Massachusetts Ave, Cambridge",
+      "latitude": 42.374100,
+      "longitude": -71.106100,
       "neighborhood": "cambridge"
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "elevator",
-      "dishwasher",
-      "laundry",
-      "garage"
-    ],
+    "amenities": ["elevator", "dishwasher", "laundry", "garage"],
     "squareFeet": 890,
     "available": "2024-02-04",
     "photos": [
@@ -62,20 +52,14 @@
     "bedrooms": 3,
     "bathrooms": 1,
     "location": {
-      "address": "149 Boylston St, Beacon Hill",
-      "latitude": 42.376712,
-      "longitude": -71.06753,
+      "address": "149 Charles St, Beacon Hill",
+      "latitude": 42.359200,
+      "longitude": -71.071200,
       "neighborhood": "beacon hill"
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "study room",
-      "elevator",
-      "bike storage",
-      "laundry",
-      "dishwasher"
-    ],
+    "amenities": ["study room", "elevator", "bike storage", "laundry", "dishwasher"],
     "squareFeet": 1683,
     "available": "2024-02-24",
     "photos": [
@@ -91,20 +75,14 @@
     "bedrooms": 1,
     "bathrooms": 2,
     "location": {
-      "address": "742 Washington St, Cambridge",
-      "latitude": 42.377055,
-      "longitude": -71.063743,
+      "address": "742 Harvard St, Cambridge",
+      "latitude": 42.373300,
+      "longitude": -71.106300,
       "neighborhood": "cambridge"
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "dishwasher",
-      "study room",
-      "fireplace",
-      "balcony",
-      "bike storage"
-    ],
+    "amenities": ["dishwasher", "study room", "fireplace", "balcony", "bike storage"],
     "squareFeet": 774,
     "available": "2024-01-20",
     "photos": [
@@ -120,19 +98,14 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "location": {
-      "address": "760 Boylston St, South End",
-      "latitude": 42.341342,
-      "longitude": -71.042241,
+      "address": "760 Tremont St, South End",
+      "latitude": 42.341400,
+      "longitude": -71.072400,
       "neighborhood": "south end"
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "rooftop",
-      "laundry",
-      "balcony",
-      "fireplace"
-    ],
+    "amenities": ["rooftop", "laundry", "balcony", "fireplace"],
     "squareFeet": 1402,
     "available": "2024-01-01",
     "photos": [
@@ -148,21 +121,14 @@
     "bedrooms": 0,
     "bathrooms": 2,
     "location": {
-      "address": "415 Massachusetts Ave, South End",
-      "latitude": 42.348261,
-      "longitude": -71.064439,
+      "address": "415 Washington St, South End",
+      "latitude": 42.340500,
+      "longitude": -71.073500,
       "neighborhood": "south end"
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "laundry",
-      "fireplace",
-      "bike storage",
-      "central air",
-      "dishwasher",
-      "yard"
-    ],
+    "amenities": ["laundry", "fireplace", "bike storage", "central air", "dishwasher", "yard"],
     "squareFeet": 410,
     "available": "2024-01-11",
     "photos": [
@@ -178,21 +144,14 @@
     "bedrooms": 1,
     "bathrooms": 1,
     "location": {
-      "address": "289 Washington St, Fenway",
-      "latitude": 42.373057,
-      "longitude": -71.052338,
+      "address": "289 Park Dr, Fenway",
+      "latitude": 42.344600,
+      "longitude": -71.098600,
       "neighborhood": "fenway"
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "elevator",
-      "garage",
-      "balcony",
-      "gym",
-      "rooftop",
-      "doorman"
-    ],
+    "amenities": ["elevator", "garage", "balcony", "gym", "rooftop", "doorman"],
     "squareFeet": 979,
     "available": "2024-02-29",
     "photos": [
@@ -208,19 +167,14 @@
     "bedrooms": 3,
     "bathrooms": 1,
     "location": {
-      "address": "550 Commonwealth Ave, Roxbury",
-      "latitude": 42.378886,
-      "longitude": -71.077588,
+      "address": "550 Warren St, Roxbury",
+      "latitude": 42.323700,
+      "longitude": -71.091700,
       "neighborhood": "roxbury"
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "elevator",
-      "balcony",
-      "fireplace",
-      "dishwasher"
-    ],
+    "amenities": ["elevator", "balcony", "fireplace", "dishwasher"],
     "squareFeet": 1845,
     "available": "2024-03-29",
     "photos": [
@@ -236,18 +190,14 @@
     "bedrooms": 3,
     "bathrooms": 1,
     "location": {
-      "address": "655 Commonwealth Ave, Fenway",
-      "latitude": 42.376035,
-      "longitude": -71.073431,
+      "address": "655 Boylston St, Fenway",
+      "latitude": 42.343800,
+      "longitude": -71.099800,
       "neighborhood": "fenway"
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "yard",
-      "study room",
-      "rooftop"
-    ],
+    "amenities": ["yard", "study room", "rooftop"],
     "squareFeet": 1653,
     "available": "2024-03-31",
     "photos": [
@@ -263,18 +213,14 @@
     "bedrooms": 3,
     "bathrooms": 2,
     "location": {
-      "address": "731 Boylston St, Fenway",
-      "latitude": 42.356995,
-      "longitude": -71.039991,
+      "address": "731 Fenway, Fenway",
+      "latitude": 42.342900,
+      "longitude": -71.100900,
       "neighborhood": "fenway"
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "balcony",
-      "gym",
-      "laundry"
-    ],
+    "amenities": ["balcony", "gym", "laundry"],
     "squareFeet": 1588,
     "available": "2024-03-10",
     "photos": [
@@ -291,20 +237,13 @@
     "bathrooms": 1,
     "location": {
       "address": "575 Commonwealth Ave, Back Bay",
-      "latitude": 42.361318,
-      "longitude": -71.059941,
+      "latitude": 42.349000,
+      "longitude": -71.078000,
       "neighborhood": "back bay"
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "rooftop",
-      "pool",
-      "laundry",
-      "study room",
-      "central air",
-      "fireplace"
-    ],
+    "amenities": ["rooftop", "pool", "laundry", "study room", "central air", "fireplace"],
     "squareFeet": 1188,
     "available": "2024-01-20",
     "photos": [
@@ -321,20 +260,13 @@
     "bathrooms": 1,
     "location": {
       "address": "565 Washington St, South End",
-      "latitude": 42.363058,
-      "longitude": -71.068781,
+      "latitude": 42.341100,
+      "longitude": -71.074100,
       "neighborhood": "south end"
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "garage",
-      "pool",
-      "gym",
-      "elevator",
-      "doorman",
-      "bike storage"
-    ],
+    "amenities": ["garage", "pool", "gym", "elevator", "doorman", "bike storage"],
     "squareFeet": 1676,
     "available": "2024-01-03",
     "photos": [
@@ -350,18 +282,14 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "location": {
-      "address": "773 Commonwealth Ave, Dorchester",
-      "latitude": 42.34157,
-      "longitude": -71.051554,
+      "address": "773 Dorchester Ave, Dorchester",
+      "latitude": 42.298200,
+      "longitude": -71.062200,
       "neighborhood": "dorchester"
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "balcony",
-      "elevator",
-      "pool"
-    ],
+    "amenities": ["balcony", "elevator", "pool"],
     "squareFeet": 1442,
     "available": "2024-01-04",
     "photos": [
@@ -377,18 +305,14 @@
     "bedrooms": 0,
     "bathrooms": 2,
     "location": {
-      "address": "553 Commonwealth Ave, Roxbury",
-      "latitude": 42.342535,
-      "longitude": -71.045024,
+      "address": "553 Warren St, Roxbury",
+      "latitude": 42.322300,
+      "longitude": -71.092300,
       "neighborhood": "roxbury"
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "pool",
-      "study room",
-      "dishwasher"
-    ],
+    "amenities": ["pool", "study room", "dishwasher"],
     "squareFeet": 562,
     "available": "2024-03-27",
     "photos": [
@@ -404,19 +328,14 @@
     "bedrooms": 1,
     "bathrooms": 2,
     "location": {
-      "address": "932 Washington St, Roxbury",
-      "latitude": 42.369732,
-      "longitude": -71.04247,
+      "address": "932 Blue Hill Ave, Roxbury",
+      "latitude": 42.321400,
+      "longitude": -71.093400,
       "neighborhood": "roxbury"
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "laundry",
-      "gym",
-      "study room",
-      "doorman"
-    ],
+    "amenities": ["laundry", "gym", "study room", "doorman"],
     "squareFeet": 1143,
     "available": "2024-01-24",
     "photos": [
@@ -432,20 +351,14 @@
     "bedrooms": 1,
     "bathrooms": 2,
     "location": {
-      "address": "719 Massachusetts Ave, South End",
-      "latitude": 42.370923,
-      "longitude": -71.058009,
+      "address": "719 Shawmut Ave, South End",
+      "latitude": 42.340500,
+      "longitude": -71.075500,
       "neighborhood": "south end"
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "balcony",
-      "central air",
-      "yard",
-      "elevator",
-      "dishwasher"
-    ],
+    "amenities": ["balcony", "central air", "yard", "elevator", "dishwasher"],
     "squareFeet": 1077,
     "available": "2024-01-21",
     "photos": [
@@ -461,19 +374,14 @@
     "bedrooms": 1,
     "bathrooms": 2,
     "location": {
-      "address": "317 Commonwealth Ave, Seaport",
-      "latitude": 42.352014,
-      "longitude": -71.059185,
+      "address": "317 Northern Ave, Seaport",
+      "latitude": 42.349600,
+      "longitude": -71.046600,
       "neighborhood": "seaport"
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "laundry",
-      "doorman",
-      "garage",
-      "study room"
-    ],
+    "amenities": ["laundry", "doorman", "garage", "study room"],
     "squareFeet": 1131,
     "available": "2024-01-12",
     "photos": [
@@ -489,19 +397,14 @@
     "bedrooms": 3,
     "bathrooms": 1,
     "location": {
-      "address": "310 Commonwealth Ave, Fenway",
-      "latitude": 42.356374,
-      "longitude": -71.041,
+      "address": "310 Brookline Ave, Fenway",
+      "latitude": 42.344700,
+      "longitude": -71.101700,
       "neighborhood": "fenway"
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "yard",
-      "fireplace",
-      "balcony",
-      "gym"
-    ],
+    "amenities": ["yard", "fireplace", "balcony", "gym"],
     "squareFeet": 1657,
     "available": "2024-03-14",
     "photos": [
@@ -517,21 +420,14 @@
     "bedrooms": 3,
     "bathrooms": 2,
     "location": {
-      "address": "245 Washington St, Seaport",
-      "latitude": 42.358547,
-      "longitude": -71.066068,
+      "address": "245 Summer St, Seaport",
+      "latitude": 42.348800,
+      "longitude": -71.047800,
       "neighborhood": "seaport"
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "yard",
-      "dishwasher",
-      "fireplace",
-      "doorman",
-      "study room",
-      "bike storage"
-    ],
+    "amenities": ["yard", "dishwasher", "fireplace", "doorman", "study room", "bike storage"],
     "squareFeet": 1718,
     "available": "2024-03-30",
     "photos": [
@@ -547,21 +443,14 @@
     "bedrooms": 1,
     "bathrooms": 1,
     "location": {
-      "address": "682 Boylston St, North End",
-      "latitude": 42.341497,
-      "longitude": -71.066418,
+      "address": "682 Hanover St, North End",
+      "latitude": 42.365900,
+      "longitude": -71.054900,
       "neighborhood": "north end"
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "balcony",
-      "central air",
-      "doorman",
-      "gym",
-      "pool",
-      "yard"
-    ],
+    "amenities": ["balcony", "central air", "doorman", "gym", "pool", "yard"],
     "squareFeet": 1018,
     "available": "2024-02-22",
     "photos": [
@@ -577,21 +466,14 @@
     "bedrooms": 3,
     "bathrooms": 1,
     "location": {
-      "address": "372 Boylston St, North End",
-      "latitude": 42.373831,
-      "longitude": -71.051208,
+      "address": "372 Salem St, North End",
+      "latitude": 42.364000,
+      "longitude": -71.055000,
       "neighborhood": "north end"
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "bike storage",
-      "laundry",
-      "dishwasher",
-      "pool",
-      "yard",
-      "fireplace"
-    ],
+    "amenities": ["bike storage", "laundry", "dishwasher", "pool", "yard", "fireplace"],
     "squareFeet": 1546,
     "available": "2024-01-31",
     "photos": [
@@ -607,21 +489,14 @@
     "bedrooms": 3,
     "bathrooms": 1,
     "location": {
-      "address": "669 Boylston St, Cambridge",
-      "latitude": 42.36396,
-      "longitude": -71.044485,
+      "address": "669 Cambridge St, Cambridge",
+      "latitude": 42.372100,
+      "longitude": -71.107100,
       "neighborhood": "cambridge"
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "dishwasher",
-      "laundry",
-      "garage",
-      "bike storage",
-      "study room",
-      "gym"
-    ],
+    "amenities": ["dishwasher", "laundry", "garage", "bike storage", "study room", "gym"],
     "squareFeet": 1649,
     "available": "2024-01-25",
     "photos": [
@@ -637,18 +512,14 @@
     "bedrooms": 2,
     "bathrooms": 1,
     "location": {
-      "address": "591 Commonwealth Ave, Beacon Hill",
-      "latitude": 42.342161,
-      "longitude": -71.045182,
+      "address": "591 Beacon St, Beacon Hill",
+      "latitude": 42.361200,
+      "longitude": -71.069200,
       "neighborhood": "beacon hill"
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "doorman",
-      "yard",
-      "bike storage"
-    ],
+    "amenities": ["doorman", "yard", "bike storage"],
     "squareFeet": 1545,
     "available": "2024-02-14",
     "photos": [
@@ -665,20 +536,13 @@
     "bathrooms": 1,
     "location": {
       "address": "261 Boylston St, Back Bay",
-      "latitude": 42.371288,
-      "longitude": -71.054161,
+      "latitude": 42.351300,
+      "longitude": -71.079300,
       "neighborhood": "back bay"
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "bike storage",
-      "study room",
-      "fireplace",
-      "garage",
-      "yard",
-      "elevator"
-    ],
+    "amenities": ["bike storage", "study room", "fireplace", "garage", "yard", "elevator"],
     "squareFeet": 824,
     "available": "2024-01-04",
     "photos": [
@@ -694,18 +558,14 @@
     "bedrooms": 1,
     "bathrooms": 2,
     "location": {
-      "address": "183 Commonwealth Ave, South End",
-      "latitude": 42.372631,
-      "longitude": -71.055262,
+      "address": "183 Washington St, South End",
+      "latitude": 42.339400,
+      "longitude": -71.076400,
       "neighborhood": "south end"
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "central air",
-      "fireplace",
-      "pool"
-    ],
+    "amenities": ["central air", "fireplace", "pool"],
     "squareFeet": 915,
     "available": "2024-01-17",
     "photos": [
@@ -728,11 +588,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "near T",
-      "laundry",
-      "hardwood floors"
-    ],
+    "amenities": ["near T", "laundry", "hardwood floors"],
     "squareFeet": 1150,
     "available": "2024-02-28",
     "photos": [
@@ -755,13 +611,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "gym",
-      "rooftop",
-      "concierge",
-      "near T"
-    ],
+    "amenities": ["parking", "gym", "rooftop", "concierge", "near T"],
     "squareFeet": 1600,
     "available": "2024-03-15",
     "photos": [
@@ -784,11 +634,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "near restaurants",
-      "laundry",
-      "doorman"
-    ],
+    "amenities": ["near restaurants", "laundry", "doorman"],
     "squareFeet": 480,
     "available": "2024-01-20",
     "photos": [
@@ -811,12 +657,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "water view",
-      "parking",
-      "gym",
-      "pool"
-    ],
+    "amenities": ["water view", "parking", "gym", "pool"],
     "squareFeet": 850,
     "available": "2024-03-08",
     "photos": [
@@ -839,11 +680,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "fireplace",
-      "historic charm",
-      "hardwood floors"
-    ],
+    "amenities": ["fireplace", "historic charm", "hardwood floors"],
     "squareFeet": 1100,
     "available": "2024-04-01",
     "photos": [
@@ -866,13 +703,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "harbor view",
-      "concierge",
-      "gym",
-      "rooftop",
-      "valet parking"
-    ],
+    "amenities": ["harbor view", "concierge", "gym", "rooftop", "valet parking"],
     "squareFeet": 1400,
     "available": "2024-03-20",
     "photos": [
@@ -895,11 +726,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "laundry",
-      "near T"
-    ],
+    "amenities": ["parking", "laundry", "near T"],
     "squareFeet": 650,
     "available": "2024-02-01",
     "photos": [
@@ -922,12 +749,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "near T",
-      "laundry",
-      "dishwasher",
-      "balcony"
-    ],
+    "amenities": ["near T", "laundry", "dishwasher", "balcony"],
     "squareFeet": 1200,
     "available": "2024-02-22",
     "photos": [
@@ -950,12 +772,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "near MIT",
-      "gym",
-      "rooftop",
-      "parking"
-    ],
+    "amenities": ["near MIT", "gym", "rooftop", "parking"],
     "squareFeet": 750,
     "available": "2024-03-10",
     "photos": [
@@ -978,11 +795,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "private garden",
-      "parking",
-      "laundry"
-    ],
+    "amenities": ["private garden", "parking", "laundry"],
     "squareFeet": 1000,
     "available": "2024-02-14",
     "photos": [
@@ -1005,11 +818,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "city view",
-      "rooftop access",
-      "exposed brick"
-    ],
+    "amenities": ["city view", "rooftop access", "exposed brick"],
     "squareFeet": 600,
     "available": "2024-03-01",
     "photos": [
@@ -1032,12 +841,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "yard",
-      "laundry",
-      "dishwasher"
-    ],
+    "amenities": ["parking", "yard", "laundry", "dishwasher"],
     "squareFeet": 1500,
     "available": "2024-02-15",
     "photos": [
@@ -1060,11 +864,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "laundry",
-      "near Tufts"
-    ],
+    "amenities": ["parking", "laundry", "near Tufts"],
     "squareFeet": 700,
     "available": "2024-03-05",
     "photos": [
@@ -1087,13 +887,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "concierge",
-      "gym",
-      "rooftop",
-      "valet parking",
-      "doorman"
-    ],
+    "amenities": ["concierge", "gym", "rooftop", "valet parking", "doorman"],
     "squareFeet": 1300,
     "available": "2024-04-10",
     "photos": [
@@ -1116,11 +910,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "high ceilings",
-      "stained glass",
-      "unique architecture"
-    ],
+    "amenities": ["high ceilings", "stained glass", "unique architecture"],
     "squareFeet": 1250,
     "available": "2024-03-18",
     "photos": [
@@ -1143,11 +933,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "near Harvard",
-      "laundry",
-      "study room"
-    ],
+    "amenities": ["near Harvard", "laundry", "study room"],
     "squareFeet": 1350,
     "available": "2024-01-25",
     "photos": [
@@ -1170,10 +956,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "historic district",
-      "near common"
-    ],
+    "amenities": ["historic district", "near common"],
     "squareFeet": 350,
     "available": "2024-02-08",
     "photos": [
@@ -1196,12 +979,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "laundry",
-      "dishwasher",
-      "near green line"
-    ],
+    "amenities": ["parking", "laundry", "dishwasher", "near green line"],
     "squareFeet": 2000,
     "available": "2024-03-25",
     "photos": [
@@ -1224,11 +1002,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "high ceilings",
-      "exposed brick",
-      "hardwood floors"
-    ],
+    "amenities": ["high ceilings", "exposed brick", "hardwood floors"],
     "squareFeet": 850,
     "available": "2024-02-12",
     "photos": [
@@ -1251,12 +1025,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "gym",
-      "rooftop",
-      "dishwasher"
-    ],
+    "amenities": ["parking", "gym", "rooftop", "dishwasher"],
     "squareFeet": 1550,
     "available": "2024-03-22",
     "photos": [
@@ -1279,11 +1048,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "yard",
-      "laundry"
-    ],
+    "amenities": ["parking", "yard", "laundry"],
     "squareFeet": 1100,
     "available": "2024-02-28",
     "photos": [
@@ -1306,11 +1071,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "historic charm",
-      "fireplace",
-      "hardwood floors"
-    ],
+    "amenities": ["historic charm", "fireplace", "hardwood floors"],
     "squareFeet": 750,
     "available": "2024-03-08",
     "photos": [
@@ -1333,11 +1094,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "yard",
-      "laundry"
-    ],
+    "amenities": ["parking", "yard", "laundry"],
     "squareFeet": 950,
     "available": "2024-01-30",
     "photos": [
@@ -1360,13 +1117,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "garage",
-      "gym",
-      "rooftop",
-      "concierge",
-      "balcony"
-    ],
+    "amenities": ["garage", "gym", "rooftop", "concierge", "balcony"],
     "squareFeet": 1250,
     "available": "2024-04-01",
     "photos": [
@@ -1389,11 +1140,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "river view",
-      "gym",
-      "near MIT"
-    ],
+    "amenities": ["river view", "gym", "near MIT"],
     "squareFeet": 800,
     "available": "2024-02-20",
     "photos": [
@@ -1416,13 +1163,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "city view",
-      "concierge",
-      "valet parking",
-      "spa",
-      "wine cellar"
-    ],
+    "amenities": ["city view", "concierge", "valet parking", "spa", "wine cellar"],
     "squareFeet": 2500,
     "available": "2024-05-01",
     "photos": [
@@ -1445,11 +1186,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "near library",
-      "doorman",
-      "laundry"
-    ],
+    "amenities": ["near library", "doorman", "laundry"],
     "squareFeet": 700,
     "available": "2024-02-15",
     "photos": [
@@ -1472,10 +1209,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "laundry",
-      "near orange line"
-    ],
+    "amenities": ["laundry", "near orange line"],
     "squareFeet": 400,
     "available": "2024-01-20",
     "photos": [
@@ -1498,12 +1232,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "dishwasher",
-      "balcony",
-      "near green line"
-    ],
+    "amenities": ["parking", "dishwasher", "balcony", "near green line"],
     "squareFeet": 1150,
     "available": "2024-03-12",
     "photos": [
@@ -1526,12 +1255,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "garage",
-      "gym",
-      "concierge",
-      "near TD Garden"
-    ],
+    "amenities": ["garage", "gym", "concierge", "near TD Garden"],
     "squareFeet": 750,
     "available": "2024-02-25",
     "photos": [
@@ -1554,11 +1278,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "garden access",
-      "near Fenway Park",
-      "laundry"
-    ],
+    "amenities": ["garden access", "near Fenway Park", "laundry"],
     "squareFeet": 500,
     "available": "2024-03-01",
     "photos": [
@@ -1581,12 +1301,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "shopping district",
-      "doorman",
-      "balcony",
-      "fireplace"
-    ],
+    "amenities": ["shopping district", "doorman", "balcony", "fireplace"],
     "squareFeet": 1300,
     "available": "2024-04-15",
     "photos": [
@@ -1609,11 +1324,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "laundry",
-      "near orange line"
-    ],
+    "amenities": ["parking", "laundry", "near orange line"],
     "squareFeet": 1200,
     "available": "2024-02-10",
     "photos": [
@@ -1636,12 +1347,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "gym",
-      "near green line",
-      "balcony"
-    ],
+    "amenities": ["parking", "gym", "near green line", "balcony"],
     "squareFeet": 750,
     "available": "2024-03-15",
     "photos": [
@@ -1664,13 +1370,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "harbor view",
-      "concierge",
-      "valet parking",
-      "spa",
-      "rooftop"
-    ],
+    "amenities": ["harbor view", "concierge", "valet parking", "spa", "rooftop"],
     "squareFeet": 2000,
     "available": "2024-04-20",
     "photos": [
@@ -1693,12 +1393,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "exposed brick",
-      "high ceilings",
-      "parking",
-      "artist community"
-    ],
+    "amenities": ["exposed brick", "high ceilings", "parking", "artist community"],
     "squareFeet": 1200,
     "available": "2024-03-05",
     "photos": [
@@ -1714,18 +1409,14 @@
     "bedrooms": 2,
     "bathrooms": 1,
     "location": {
-      "address": "789 Comm Ave, Allston",
+      "address": "789 Commonwealth Ave, Allston",
       "latitude": 42.350123,
       "longitude": -71.126789,
       "neighborhood": "allston"
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "near BU",
-      "laundry",
-      "study room"
-    ],
+    "amenities": ["near BU", "laundry", "study room"],
     "squareFeet": 900,
     "available": "2024-01-15",
     "photos": [
@@ -1748,11 +1439,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "historic district",
-      "fireplace",
-      "hardwood floors"
-    ],
+    "amenities": ["historic district", "fireplace", "hardwood floors"],
     "squareFeet": 650,
     "available": "2024-04-01",
     "photos": [
@@ -1775,13 +1462,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "yard",
-      "laundry",
-      "dishwasher",
-      "quiet neighborhood"
-    ],
+    "amenities": ["parking", "yard", "laundry", "dishwasher", "quiet neighborhood"],
     "squareFeet": 1800,
     "available": "2024-03-01",
     "photos": [
@@ -1804,11 +1485,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": false,
-    "amenities": [
-      "near restaurants",
-      "laundry",
-      "bike storage"
-    ],
+    "amenities": ["near restaurants", "laundry", "bike storage"],
     "squareFeet": 1000,
     "available": "2024-02-28",
     "photos": [
@@ -1831,13 +1508,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "city view",
-      "concierge",
-      "spa",
-      "valet parking",
-      "sky lounge"
-    ],
+    "amenities": ["city view", "concierge", "spa", "valet parking", "sky lounge"],
     "squareFeet": 650,
     "available": "2024-04-08",
     "photos": [
@@ -1860,12 +1531,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "exposed brick",
-      "high ceilings",
-      "artist space"
-    ],
+    "amenities": ["parking", "exposed brick", "high ceilings", "artist space"],
     "squareFeet": 1500,
     "available": "2024-03-18",
     "photos": [
@@ -1888,12 +1554,7 @@
     },
     "petFriendly": false,
     "parkingAvailable": true,
-    "amenities": [
-      "garage",
-      "doorman",
-      "near T",
-      "city view"
-    ],
+    "amenities": ["garage", "doorman", "near T", "city view"],
     "squareFeet": 1200,
     "available": "2024-03-25",
     "photos": [
@@ -1916,13 +1577,7 @@
     },
     "petFriendly": true,
     "parkingAvailable": true,
-    "amenities": [
-      "city view",
-      "concierge",
-      "valet parking",
-      "spa",
-      "sky deck"
-    ],
+    "amenities": ["city view", "concierge", "valet parking", "spa", "sky deck"],
     "squareFeet": 1600,
     "available": "2024-05-01",
     "photos": [
@@ -1945,824 +1600,13 @@
     },
     "petFriendly": false,
     "parkingAvailable": false,
-    "amenities": [
-      "historic brownstone",
-      "fireplace",
-      "hardwood floors",
-      "high ceilings"
-    ],
+    "amenities": ["historic brownstone", "fireplace", "hardwood floors", "high ceilings"],
     "squareFeet": 1700,
     "available": "2024-04-10",
     "photos": [
       "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
       "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-026",
-    "title": "Sunny 0-BR in Seaport",
-    "price": 1068,
-    "bedrooms": 0,
-    "bathrooms": 2,
-    "location": {
-      "address": "460 Boylston St, Seaport",
-      "latitude": 42.342877,
-      "longitude": -71.054669,
-      "neighborhood": "seaport"
-    },
-    "petFriendly": false,
-    "parkingAvailable": true,
-    "amenities": [
-      "study room",
-      "garage",
-      "yard"
-    ],
-    "squareFeet": 973,
-    "available": "2024-03-29",
-    "photos": [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
-      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-027",
-    "title": "Cozy 0-BR in Seaport",
-    "price": 1112,
-    "bedrooms": 0,
-    "bathrooms": 2,
-    "location": {
-      "address": "731 Commonwealth Ave, Seaport",
-      "latitude": 42.34655,
-      "longitude": -71.04871,
-      "neighborhood": "seaport"
-    },
-    "petFriendly": false,
-    "parkingAvailable": true,
-    "amenities": [
-      "laundry",
-      "doorman",
-      "elevator",
-      "fireplace",
-      "bike storage",
-      "yard"
-    ],
-    "squareFeet": 445,
-    "available": "2024-01-20",
-    "photos": [
-      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-028",
-    "title": "Modern 0-BR in South End",
-    "price": 1904,
-    "bedrooms": 0,
-    "bathrooms": 1,
-    "location": {
-      "address": "293 Commonwealth Ave, South End",
-      "latitude": 42.365961,
-      "longitude": -71.047765,
-      "neighborhood": "south end"
-    },
-    "petFriendly": true,
-    "parkingAvailable": false,
-    "amenities": [
-      "central air",
-      "garage",
-      "study room",
-      "gym",
-      "laundry",
-      "bike storage"
-    ],
-    "squareFeet": 883,
-    "available": "2024-02-26",
-    "photos": [
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-029",
-    "title": "Elegant 0-BR in South End",
-    "price": 2259,
-    "bedrooms": 0,
-    "bathrooms": 1,
-    "location": {
-      "address": "279 Washington St, South End",
-      "latitude": 42.352949,
-      "longitude": -71.078347,
-      "neighborhood": "south end"
-    },
-    "petFriendly": false,
-    "parkingAvailable": true,
-    "amenities": [
-      "bike storage",
-      "balcony",
-      "elevator"
-    ],
-    "squareFeet": 401,
-    "available": "2024-02-27",
-    "photos": [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-030",
-    "title": "Modern 2-BR in Seaport",
-    "price": 3509,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "location": {
-      "address": "891 Commonwealth Ave, Seaport",
-      "latitude": 42.37657,
-      "longitude": -71.071401,
-      "neighborhood": "seaport"
-    },
-    "petFriendly": true,
-    "parkingAvailable": false,
-    "amenities": [
-      "doorman",
-      "central air",
-      "dishwasher",
-      "study room",
-      "balcony"
-    ],
-    "squareFeet": 1056,
-    "available": "2024-02-13",
-    "photos": [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
-      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-031",
-    "title": "Luxury 2-BR in Back Bay",
-    "price": 5200,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "location": {
-      "address": "88 Exeter St, Back Bay",
-      "latitude": 42.349876,
-      "longitude": -71.078901,
-      "neighborhood": "back bay"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "concierge",
-      "rooftop",
-      "pool",
-      "gym",
-      "valet parking"
-    ],
-    "squareFeet": 1450,
-    "available": "2024-04-01",
-    "photos": [
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
-      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-032",
-    "title": "Historic 1-BR in Beacon Hill",
-    "price": 3800,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "location": {
-      "address": "45 Chestnut St, Beacon Hill",
-      "latitude": 42.358234,
-      "longitude": -71.068452,
-      "neighborhood": "beacon hill"
-    },
-    "petFriendly": false,
-    "parkingAvailable": false,
-    "amenities": [
-      "fireplace",
-      "hardwood floors",
-      "exposed brick"
-    ],
-    "squareFeet": 850,
-    "available": "2024-03-15",
-    "photos": [
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-033",
-    "title": "Student-Friendly Studio in Allston",
-    "price": 1200,
-    "bedrooms": 0,
-    "bathrooms": 1,
-    "location": {
-      "address": "123 Harvard Ave, Allston",
-      "latitude": 42.352189,
-      "longitude": -71.131476,
-      "neighborhood": "allston"
-    },
-    "petFriendly": false,
-    "parkingAvailable": false,
-    "amenities": [
-      "laundry",
-      "bike storage"
-    ],
-    "squareFeet": 420,
-    "available": "2024-02-01",
-    "photos": [
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-034",
-    "title": "Modern 2-BR in Somerville",
-    "price": 2900,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "location": {
-      "address": "456 Davis Square, Somerville",
-      "latitude": 42.396732,
-      "longitude": -71.121843,
-      "neighborhood": "somerville"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "dishwasher",
-      "laundry",
-      "balcony",
-      "central air"
-    ],
-    "squareFeet": 1100,
-    "available": "2024-03-01",
-    "photos": [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-035",
-    "title": "Luxury Studio in Seaport",
-    "price": 2800,
-    "bedrooms": 0,
-    "bathrooms": 1,
-    "location": {
-      "address": "100 Pier 4 Blvd, Seaport",
-      "latitude": 42.348756,
-      "longitude": -71.042134,
-      "neighborhood": "seaport"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "concierge",
-      "gym",
-      "rooftop",
-      "harbor view",
-      "valet parking"
-    ],
-    "squareFeet": 650,
-    "available": "2024-02-15",
-    "photos": [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
-      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-036",
-    "title": "Charming 1-BR in Jamaica Plain",
-    "price": 2100,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "location": {
-      "address": "789 Centre St, Jamaica Plain",
-      "latitude": 42.314567,
-      "longitude": -71.113456,
-      "neighborhood": "jamaica plain"
-    },
-    "petFriendly": true,
-    "parkingAvailable": false,
-    "amenities": [
-      "laundry",
-      "bike storage",
-      "yard"
-    ],
-    "squareFeet": 750,
-    "available": "2024-03-20",
-    "photos": [
-      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-037",
-    "title": "Spacious 3-BR in Brighton",
-    "price": 3200,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "location": {
-      "address": "234 Washington St, Brighton",
-      "latitude": 42.348923,
-      "longitude": -71.157654,
-      "neighborhood": "brighton"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "laundry",
-      "dishwasher",
-      "balcony"
-    ],
-    "squareFeet": 1600,
-    "available": "2024-02-10",
-    "photos": [
-      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
-      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-038",
-    "title": "Trendy Loft in South End",
-    "price": 3600,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "location": {
-      "address": "567 Tremont St, South End",
-      "latitude": 42.342234,
-      "longitude": -71.069876,
-      "neighborhood": "south end"
-    },
-    "petFriendly": false,
-    "parkingAvailable": false,
-    "amenities": [
-      "exposed brick",
-      "high ceilings",
-      "hardwood floors"
-    ],
-    "squareFeet": 900,
-    "available": "2024-03-05",
-    "photos": [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-039",
-    "title": "Waterfront 2-BR in East Boston",
-    "price": 2700,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "location": {
-      "address": "890 Marginal St, East Boston",
-      "latitude": 42.368745,
-      "longitude": -71.030123,
-      "neighborhood": "east boston"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "water view",
-      "parking",
-      "balcony",
-      "gym"
-    ],
-    "squareFeet": 1250,
-    "available": "2024-02-20",
-    "photos": [
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-040",
-    "title": "University Adjacent 3-BR in Cambridge",
-    "price": 4200,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "location": {
-      "address": "789 Harvard St, Cambridge",
-      "latitude": 42.374567,
-      "longitude": -71.120345,
-      "neighborhood": "cambridge"
-    },
-    "petFriendly": false,
-    "parkingAvailable": false,
-    "amenities": [
-      "study room",
-      "wifi included",
-      "near T"
-    ],
-    "squareFeet": 1400,
-    "available": "2024-01-30",
-    "photos": [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-041",
-    "title": "Penthouse 2-BR in Financial District",
-    "price": 6500,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "location": {
-      "address": "1 Financial Center, Financial District",
-      "latitude": 42.356789,
-      "longitude": -71.055432,
-      "neighborhood": "financial district"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "city view",
-      "concierge",
-      "valet parking",
-      "rooftop",
-      "gym"
-    ],
-    "squareFeet": 1800,
-    "available": "2024-04-15",
-    "photos": [
-      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
-      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-042",
-    "title": "Cozy 1-BR in Charlestown",
-    "price": 2400,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "location": {
-      "address": "345 Bunker Hill St, Charlestown",
-      "latitude": 42.376543,
-      "longitude": -71.064321,
-      "neighborhood": "charlestown"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "laundry",
-      "harbor view"
-    ],
-    "squareFeet": 800,
-    "available": "2024-02-25",
-    "photos": [
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-043",
-    "title": "Modern Studio in Financial District",
-    "price": 2200,
-    "bedrooms": 0,
-    "bathrooms": 1,
-    "location": {
-      "address": "75 State St, Financial District",
-      "latitude": 42.358912,
-      "longitude": -71.057234,
-      "neighborhood": "financial district"
-    },
-    "petFriendly": false,
-    "parkingAvailable": false,
-    "amenities": [
-      "gym",
-      "rooftop",
-      "doorman"
-    ],
-    "squareFeet": 550,
-    "available": "2024-01-25",
-    "photos": [
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-044",
-    "title": "Garden Level 2-BR in Jamaica Plain",
-    "price": 2350,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "location": {
-      "address": "456 South St, Jamaica Plain",
-      "latitude": 42.319876,
-      "longitude": -71.108765,
-      "neighborhood": "jamaica plain"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "private garden",
-      "parking",
-      "laundry",
-      "bike storage"
-    ],
-    "squareFeet": 1000,
-    "available": "2024-03-10",
-    "photos": [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-045",
-    "title": "Industrial Loft in South End",
-    "price": 4100,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "location": {
-      "address": "890 Harrison Ave, South End",
-      "latitude": 42.339876,
-      "longitude": -71.065432,
-      "neighborhood": "south end"
-    },
-    "petFriendly": false,
-    "parkingAvailable": true,
-    "amenities": [
-      "exposed brick",
-      "high ceilings",
-      "parking",
-      "dishwasher"
-    ],
-    "squareFeet": 1350,
-    "available": "2024-04-01",
-    "photos": [
-      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
-      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-046",
-    "title": "Converted Warehouse in Fort Point",
-    "price": 3900,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "location": {
-      "address": "234 A St, Fort Point",
-      "latitude": 42.348123,
-      "longitude": -71.049876,
-      "neighborhood": "fort point"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "high ceilings",
-      "exposed brick",
-      "parking",
-      "gym"
-    ],
-    "squareFeet": 950,
-    "available": "2024-02-08",
-    "photos": [
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
-      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-047",
-    "title": "Brownstone 2-BR in Back Bay",
-    "price": 4500,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "location": {
-      "address": "567 Marlborough St, Back Bay",
-      "latitude": 42.351234,
-      "longitude": -71.078654,
-      "neighborhood": "back bay"
-    },
-    "petFriendly": false,
-    "parkingAvailable": false,
-    "amenities": [
-      "fireplace",
-      "hardwood floors",
-      "laundry"
-    ],
-    "squareFeet": 1200,
-    "available": "2024-03-25",
-    "photos": [
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
-      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-048",
-    "title": "Affordable 3-BR in Mattapan",
-    "price": 1800,
-    "bedrooms": 3,
-    "bathrooms": 1,
-    "location": {
-      "address": "678 Blue Hill Ave, Mattapan",
-      "latitude": 42.267891,
-      "longitude": -71.093456,
-      "neighborhood": "mattapan"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "laundry",
-      "yard"
-    ],
-    "squareFeet": 1300,
-    "available": "2024-02-05",
-    "photos": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-049",
-    "title": "Modern 1-BR in Mission Hill",
-    "price": 2300,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "location": {
-      "address": "345 Huntington Ave, Mission Hill",
-      "latitude": 42.333456,
-      "longitude": -71.108765,
-      "neighborhood": "mission hill"
-    },
-    "petFriendly": false,
-    "parkingAvailable": false,
-    "amenities": [
-      "laundry",
-      "bike storage",
-      "near hospitals"
-    ],
-    "squareFeet": 700,
-    "available": "2024-03-12",
-    "photos": [
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-050",
-    "title": "Luxury 3-BR in Prudential Center",
-    "price": 7200,
-    "bedrooms": 3,
-    "bathrooms": 3,
-    "location": {
-      "address": "111 Huntington Ave, Back Bay",
-      "latitude": 42.347234,
-      "longitude": -71.081234,
-      "neighborhood": "back bay"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "concierge",
-      "pool",
-      "gym",
-      "valet parking",
-      "city view",
-      "spa"
-    ],
-    "squareFeet": 2200,
-    "available": "2024-04-10",
-    "photos": [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
-      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-051",
-    "title": "Historic 2-BR in North End",
-    "price": 3400,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "location": {
-      "address": "123 Hanover St, North End",
-      "latitude": 42.364567,
-      "longitude": -71.054321,
-      "neighborhood": "north end"
-    },
-    "petFriendly": false,
-    "parkingAvailable": false,
-    "amenities": [
-      "exposed brick",
-      "near restaurants",
-      "historic charm"
-    ],
-    "squareFeet": 1000,
-    "available": "2024-02-18",
-    "photos": [
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
-      "https://images.unsplash.com/photo-1540518614846-7eded1ba5804?w=800",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-052",
-    "title": "Family-Friendly 4-BR in Roslindale",
-    "price": 2800,
-    "bedrooms": 4,
-    "bathrooms": 2,
-    "location": {
-      "address": "456 Washington St, Roslindale",
-      "latitude": 42.284567,
-      "longitude": -71.127654,
-      "neighborhood": "roslindale"
-    },
-    "petFriendly": true,
-    "parkingAvailable": true,
-    "amenities": [
-      "parking",
-      "yard",
-      "laundry",
-      "dishwasher"
-    ],
-    "squareFeet": 1900,
-    "available": "2024-03-01",
-    "photos": [
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
-      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800",
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-053",
-    "title": "Artist Loft in Fort Point",
-    "price": 3200,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "location": {
-      "address": "567 Summer St, Fort Point",
-      "latitude": 42.349876,
-      "longitude": -71.048765,
-      "neighborhood": "fort point"
-    },
-    "petFriendly": true,
-    "parkingAvailable": false,
-    "amenities": [
-      "high ceilings",
-      "exposed brick",
-      "art studio space"
-    ],
-    "squareFeet": 1100,
-    "available": "2024-02-12",
-    "photos": [
-      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800"
-    ]
-  },
-  {
-    "id": "apt-bos-054",
-    "title": "Student Housing 4-BR in Allston",
-    "price": 3600,
-    "bedrooms": 4,
-    "bathrooms": 2,
-    "location": {
-      "address": "789 Commonwealth Ave, Allston",
-      "latitude": 42.351234,
-      "longitude": -71.134567,
-      "neighborhood": "allston"
-    },
-    "petFriendly": false,
-    "parkingAvailable": false,
-    "amenities": [
-      "laundry",
-      "study room",
-      "bike storage"
-    ],
-    "squareFeet": 1500,
-    "available": "2024-01-15",
-    "photos": [
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800"
     ]
   }
 ]
