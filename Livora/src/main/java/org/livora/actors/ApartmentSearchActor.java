@@ -36,7 +36,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
         this.objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         this.logger = context.spawn(LoggingActor.create(), "searchLogger");
 
-        // Load apartment data on startup
         this.apartmentDatabase = loadApartmentData();
 
         getContext().getLog().info("ApartmentSearchActor started with {} apartments loaded",
@@ -65,26 +64,19 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
 
         long searchTime = System.currentTimeMillis() - startTime;
 
-        // FORWARD pattern - preserve the original sender when logging
-        // This demonstrates the forward pattern by passing along the search metrics
-        // while preserving the original message sender context
         getContext().getLog().debug("Forwarding search metrics to logger...");
 
-        // Create a log entry that will be forwarded, preserving sender information
         LoggingMessages.LogSearchPerformed logMessage =
                 new LoggingMessages.LogSearchPerformed(
                         request.criteria,
                         results.size(),
-                        getContext().getSelf()  // This preserves the searcher as the context
+                        getContext().getSelf()
                 );
 
-        // FORWARD the message to logger - this preserves the original sender context
-        // The logger will know this search operation came from ApartmentSearchActor
         logger.tell(logMessage);
 
         getContext().getLog().info("Found {} apartments in {}ms", results.size(), searchTime);
 
-        // TELL pattern - respond to the requester
         request.replyTo.tell(new ApartmentSearchMessages.ApartmentsFound(results, results.size()));
 
         return this;
@@ -97,10 +89,8 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
         long startTime = System.currentTimeMillis();
 
         try {
-            // STEP 1: Get candidates from vector search (semantic similarity)
             List<VectorSearchActor.ScoredApartment> vectorCandidates = request.vectorResults.apartments;
 
-            // STEP 2: Apply structured filters to vector candidates
             List<Apartment> filteredCandidates = vectorCandidates.stream()
                     .map(scored -> scored.apartment)
                     .filter(apt -> matchesCriteria(apt, request.criteria))
@@ -109,7 +99,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
             getContext().getLog().info("After filtering {} vector candidates, {} remain",
                     vectorCandidates.size(), filteredCandidates.size());
 
-            // STEP 3: If filtered results are too few, expand search
             List<Apartment> finalResults;
             if (filteredCandidates.size() < 5) {
                 getContext().getLog().info("Too few filtered results, expanding search with relaxed criteria");
@@ -118,17 +107,14 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
                 finalResults = filteredCandidates;
             }
 
-            // STEP 4: Re-rank results using hybrid scoring
             finalResults = rerankWithHybridScoring(finalResults, vectorCandidates, request.criteria);
 
-            // STEP 5: Limit results
             finalResults = finalResults.stream().limit(50).collect(Collectors.toList());
 
             long searchTime = System.currentTimeMillis() - startTime;
             getContext().getLog().info("Hybrid search found {} apartments in {}ms",
                     finalResults.size(), searchTime);
 
-            // Log search metrics (simplified version)
             getContext().getLog().info("Search completed: {} results for criteria with {} bedrooms, max price {}",
                     finalResults.size(),
                     request.criteria.getBedrooms().orElse(-1),
@@ -153,19 +139,15 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
 
         getContext().getLog().info("Performing expanded search with relaxed criteria");
 
-        // Create relaxed criteria
         SearchCriteria relaxedCriteria = createRelaxedCriteria(criteria);
 
-        // First try vector candidates with relaxed criteria
         List<Apartment> relaxedResults = vectorCandidates.stream()
                 .map(scored -> scored.apartment)
                 .filter(apt -> matchesCriteria(apt, relaxedCriteria))
                 .collect(Collectors.toList());
 
-        // If still not enough, fall back to your existing apartment list
         if (relaxedResults.size() < 3) {
             getContext().getLog().info("Vector search insufficient, searching full apartment database");
-            // Use your existing apartment loading logic here
             return loadApartmentData().stream()
                     .filter(apt -> matchesCriteria(apt, relaxedCriteria))
                     .limit(80)
@@ -176,7 +158,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
     }
 
     private SearchCriteria createRelaxedCriteria(SearchCriteria original) {
-        // Relax price constraints by 25%
         Integer relaxedMaxPrice = original.getMaxPrice()
                 .map(price -> (int) (price * 1.25))
                 .orElse(null);
@@ -185,7 +166,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
                 .map(price -> (int) (price * 0.75))
                 .orElse(null);
 
-        // Keep other criteria the same but make location more flexible
         String relaxedLocation = original.getLocation().orElse(null);
 
         return new SearchCriteria(
@@ -208,20 +188,18 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
 
         getContext().getLog().info("Re-ranking {} apartments with hybrid scoring", apartments.size());
 
-        // Create a map of apartment ID to vector score
         Map<String, Float> vectorScores = vectorCandidates.stream()
                 .collect(Collectors.toMap(
                         scored -> scored.apartment.getId(),
                         scored -> scored.score
                 ));
 
-        // Score each apartment
         return apartments.stream()
                 .map(apt -> {
                     double totalScore = calculateHybridScore(apt, criteria, vectorScores);
                     return new ScoredApartment(apt, totalScore);
                 })
-                .sorted((a, b) -> Double.compare(b.score, a.score)) // Sort by score descending
+                .sorted((a, b) -> Double.compare(b.score, a.score))
                 .map(scored -> scored.apartment)
                 .collect(Collectors.toList());
     }
@@ -233,27 +211,22 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
 
         double score = 0.0;
 
-        // Vector similarity score (40% weight)
         float vectorScore = vectorScores.getOrDefault(apartment.getId(), 0.0f);
         score += vectorScore * 0.4;
 
-        // Structured criteria matching (60% weight)
         double criteriaScore = 0.0;
         int matchingCriteria = 0;
         int totalCriteria = 0;
 
-        // Price matching
         if (criteria.getMaxPrice().isPresent()) {
             totalCriteria++;
             if (apartment.getPrice() <= criteria.getMaxPrice().get()) {
                 matchingCriteria++;
-                // Bonus for being well under budget
                 double priceRatio = (double) apartment.getPrice() / criteria.getMaxPrice().get();
-                criteriaScore += Math.max(0, 1.5 - priceRatio); // Bonus for cheaper apartments
+                criteriaScore += Math.max(0, 1.5 - priceRatio);
             }
         }
 
-        // Bedroom matching
         if (criteria.getBedrooms().isPresent()) {
             totalCriteria++;
             if (apartment.getBedrooms() == criteria.getBedrooms().get()) {
@@ -262,7 +235,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
             }
         }
 
-        // Pet-friendly matching
         if (criteria.getPetFriendly().isPresent()) {
             totalCriteria++;
             if (apartment.isPetFriendly() == criteria.getPetFriendly().get()) {
@@ -271,7 +243,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
             }
         }
 
-        // Parking matching
         if (criteria.getParking().isPresent()) {
             totalCriteria++;
             if (apartment.isParkingAvailable() == criteria.getParking().get()) {
@@ -280,7 +251,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
             }
         }
 
-        // Location matching (fuzzy)
         if (criteria.getLocation().isPresent()) {
             totalCriteria++;
             String targetLocation = criteria.getLocation().get().toLowerCase();
@@ -290,11 +260,10 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
                 matchingCriteria++;
                 criteriaScore += 1.0;
             } else if (isNearbyNeighborhood(aptNeighborhood, targetLocation)) {
-                criteriaScore += 0.5; // Partial match for nearby areas
+                criteriaScore += 0.5;
             }
         }
 
-        // Amenities matching
         if (!criteria.getAmenities().isEmpty()) {
             totalCriteria++;
             long matchingAmenities = criteria.getAmenities().stream()
@@ -307,7 +276,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
             }
         }
 
-        // Normalize criteria score
         if (totalCriteria > 0) {
             criteriaScore = criteriaScore / totalCriteria;
         }
@@ -321,7 +289,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
     }
 
     private boolean isNearbyNeighborhood(String neighborhood1, String neighborhood2) {
-        // Define nearby neighborhood relationships
         Map<String, List<String>> nearbyMap = Map.of(
                 "downtown", List.of("financial district", "government center", "theater district"),
                 "back bay", List.of("south end", "copley", "newbury street"),
@@ -336,7 +303,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
                 nearbyMap.getOrDefault(neighborhood2, List.of()).contains(neighborhood1);
     }
 
-    // Helper class for scoring
     private static class ScoredApartment {
         public final Apartment apartment;
         public final double score;
@@ -350,19 +316,15 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
     private List<Apartment> searchApartments(SearchCriteria criteria) {
         return apartmentDatabase.stream()
                 .filter(apt -> matchesCriteria(apt, criteria))
-                .limit(60) // Limit results for performance
+                .limit(60)
                 .collect(Collectors.toList());
     }
 
     private boolean matchesCriteria(Apartment apartment, SearchCriteria criteria) {
-        // NEW: If criteria is completely empty (no filters), match all apartments
         if (isEmptyCriteria(criteria)) {
             return true;
         }
 
-        // EXISTING: Apply filters only if they are specified
-
-        // Price filtering
         if (criteria.getMinPrice().isPresent() && apartment.getPrice() < criteria.getMinPrice().get()) {
             return false;
         }
@@ -370,27 +332,22 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
             return false;
         }
 
-        // Bedroom filtering
         if (criteria.getBedrooms().isPresent() && apartment.getBedrooms() != criteria.getBedrooms().get()) {
             return false;
         }
 
-        // Bathroom filtering
         if (criteria.getBathrooms().isPresent() && apartment.getBathrooms() < criteria.getBathrooms().get()) {
             return false;
         }
 
-        // Pet-friendly filtering
         if (criteria.getPetFriendly().isPresent() && criteria.getPetFriendly().get() && !apartment.isPetFriendly()) {
             return false;
         }
 
-        // Parking filtering
         if (criteria.getParking().isPresent() && criteria.getParking().get() && !apartment.isParkingAvailable()) {
             return false;
         }
 
-        // Location filtering (case-insensitive substring match)
         if (criteria.getLocation().isPresent()) {
             String queryLocation = criteria.getLocation().get().toLowerCase();
             String aptNeighborhood = apartment.getLocation().getNeighborhood().toLowerCase();
@@ -401,7 +358,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
             }
         }
 
-        // Amenities filtering (apartment must have all requested amenities)
         if (!criteria.getAmenities().isEmpty()) {
             List<String> aptAmenities = apartment.getAmenities().stream()
                     .map(String::toLowerCase)
@@ -419,7 +375,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
         return true;
     }
 
-    // NEW: Helper method to check if criteria is completely empty
     private boolean isEmptyCriteria(SearchCriteria criteria) {
         return criteria.getMinPrice().isEmpty() &&
                 criteria.getMaxPrice().isEmpty() &&
@@ -432,7 +387,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
     }
 
     private List<Apartment> loadApartmentData() {
-        // Try multiple paths to find the file
         String[] possiblePaths = {
                 "/apartments.json",
                 "apartments.json",
@@ -454,12 +408,10 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
             }
         }
 
-        // If we get here, no file was found
         getContext().getLog().error("Could not find apartments.json in any expected location");
         getContext().getLog().info("Classpath roots: {}",
                 System.getProperty("java.class.path"));
 
-        // Check if we're running from JAR or IDE
         URL resource = getClass().getResource("/");
         if (resource != null) {
             getContext().getLog().info("Resource root: {}", resource.getPath());
@@ -470,7 +422,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
     }
 
     private List<Apartment> createFallbackData() {
-        // First try to load from file system as absolute path
         String filePath = System.getProperty("apartments.file.path");
         if (filePath != null) {
             try {
@@ -486,7 +437,6 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
             }
         }
 
-        // Create some basic apartment data if JSON loading fails
         getContext().getLog().info("Creating fallback apartment data");
         return List.of(
                 new Apartment(

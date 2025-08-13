@@ -41,18 +41,14 @@ public class MapVisualizationActor extends AbstractBehavior<Command> {
         getContext().getLog().info("Formatting {} apartments for map visualization",
                 request.apartments.size());
 
-        // Calculate map bounds
         MapBounds bounds = calculateMapBounds(request.apartments);
 
-        // Create map markers
         List<MapMarker> markers = request.apartments.stream()
                 .map(this::createMapMarker)
                 .collect(Collectors.toList());
 
-        // Group nearby apartments for clustering
         Map<String, List<MapMarker>> clusteredMarkers = clusterNearbyMarkers(markers);
 
-        // Log the map processing
         logger.tell(new LoggingMessages.LogEntry(
                 String.format("Map formatted: %d markers, %d clusters, bounds=[%.4f,%.4f to %.4f,%.4f]",
                         markers.size(),
@@ -68,7 +64,6 @@ public class MapVisualizationActor extends AbstractBehavior<Command> {
                 bounds
         );
 
-        // Respond with formatted map data
         request.replyTo.tell(new MapVisualizationMessages.MapFormatted(mapData));
 
         return this;
@@ -90,7 +85,6 @@ public class MapVisualizationActor extends AbstractBehavior<Command> {
 
     private MapBounds calculateMapBounds(List<Apartment> apartments) {
         if (apartments.isEmpty()) {
-            // Default bounds for empty results (e.g., NYC area)
             return new MapBounds(40.6892, -74.0445, 40.7589, -73.9851);
         }
 
@@ -110,7 +104,6 @@ public class MapVisualizationActor extends AbstractBehavior<Command> {
                 .mapToDouble(apt -> apt.getLocation().getLongitude())
                 .max().orElse(-74.0060);
 
-        // Add small padding to bounds
         double latPadding = (maxLat - minLat) * 0.1;
         double lonPadding = (maxLon - minLon) * 0.1;
 
@@ -123,19 +116,16 @@ public class MapVisualizationActor extends AbstractBehavior<Command> {
     }
 
     private Map<String, List<MapMarker>> clusterNearbyMarkers(List<MapMarker> markers) {
-        // Simple clustering algorithm - group markers within 0.01 degrees (~1km)
         final double CLUSTER_THRESHOLD = 0.01;
 
         return markers.stream()
                 .collect(Collectors.groupingBy(marker -> {
-                    // Create cluster key based on rounded coordinates
                     double roundedLat = Math.round(marker.latitude / CLUSTER_THRESHOLD) * CLUSTER_THRESHOLD;
                     double roundedLon = Math.round(marker.longitude / CLUSTER_THRESHOLD) * CLUSTER_THRESHOLD;
                     return String.format("%.3f,%.3f", roundedLat, roundedLon);
                 }));
     }
 
-    // Data classes for map visualization
     public static class MapMarker {
         public final String id;
         public final double latitude;
