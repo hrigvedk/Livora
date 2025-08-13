@@ -1,5 +1,7 @@
 # Livora: Intelligent Apartment Finder with RAG
 
+![Livora Architecture Diagram](images/Livora.png)
+
 ## Project Overview
 
 The **Intelligent Apartment Finder** is a distributed application that revolutionizes apartment searching using natural language processing and semantic search. Built with a microservices architecture using Akka Typed clusters, it combines Google's Gemini LLM with Retrieval-Augmented Generation (RAG) to understand conversational queries and provide relevant apartment recommendations.
