@@ -155,16 +155,6 @@ Output: {
 - **Fault Tolerance**: Actor supervision and restart strategies
 - **Scalability**: Easy horizontal scaling by adding nodes
 
-## Setup and Installation
-
-### Prerequisites
-- Java 11 or higher
-- Maven 3.6+
-- Node.js 14+
-- Docker (optional)
-- Google Cloud account (for Gemini API)
-- Qdrant vector database (local or cloud)
-
 ## Configuration
 
 ### Akka Configuration (application.conf)
@@ -269,8 +259,3 @@ mvn test
 - **Performance Metrics**: Request latency, throughput
 - **LLM Usage Tracking**: Token consumption, API costs
 - **Search Analytics**: Popular queries, success rates
-
-
-**Version**: 1.0.0  
-**Last Updated**: January 2025  
-**Status**: Active Development
