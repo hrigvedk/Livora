@@ -443,7 +443,7 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
                         "apt-fallback-001",
                         "Downtown Studio",
                         1200,
-                        0, // studio
+                        0,
                         1,
                         new Apartment.Location("100 Main St", 40.7128, -74.0060, "downtown"),
                         false,
@@ -451,7 +451,7 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
                         List.of("gym"),
                         600,
                         "2024-02-01",
-                        List.of() // empty photos list
+                        List.of()
                 ),
                 new Apartment(
                         "apt-fallback-002",
@@ -465,7 +465,7 @@ public class ApartmentSearchActor extends AbstractBehavior<Command> {
                         List.of("gym", "rooftop"),
                         1100,
                         "2024-02-15",
-                        List.of() // empty photos list
+                        List.of()
                 )
         );
     }

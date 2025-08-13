@@ -319,7 +319,6 @@ public class QueryParserActor extends AbstractBehavior<Command> {
                 .build();
     }
 
-    // Helper class for async Gemini responses
     public static class GeminiResponseReceived implements Command {
         public final QueryParserMessages.ParseQuery originalRequest;
         public final QueryParserMessages.ParseQueryWithRAG originalRAGRequest;
@@ -327,7 +326,6 @@ public class QueryParserActor extends AbstractBehavior<Command> {
         public final Throwable throwable;
         public final boolean isRAGRequest;
 
-        // Constructor for regular parse query
         public GeminiResponseReceived(QueryParserMessages.ParseQuery originalRequest, String result, Throwable throwable) {
             this.originalRequest = originalRequest;
             this.originalRAGRequest = null;
@@ -336,7 +334,6 @@ public class QueryParserActor extends AbstractBehavior<Command> {
             this.isRAGRequest = false;
         }
 
-        // Constructor for RAG parse query
         public GeminiResponseReceived(QueryParserMessages.ParseQueryWithRAG originalRAGRequest, String result, Throwable throwable) {
             this.originalRequest = null;
             this.originalRAGRequest = originalRAGRequest;
@@ -347,12 +344,10 @@ public class QueryParserActor extends AbstractBehavior<Command> {
     }
 
     private Behavior<Command> onParseQuery(QueryParserMessages.ParseQuery message) {
-        // Handle legacy parsing without RAG context
         return parseQueryInternal(message.naturalLanguageQuery, null, message.replyTo);
     }
 
     private Behavior<Command> onParseQueryWithRAG(QueryParserMessages.ParseQueryWithRAG message) {
-        // Handle RAG-enhanced parsing
         return parseQueryInternal(message.naturalLanguageQuery, message.ragContext, message.replyTo);
     }
 
@@ -364,25 +359,19 @@ public class QueryParserActor extends AbstractBehavior<Command> {
         getContext().getLog().info("Parsing query: {}", query);
 
         if (GeminiConfig.isConfigured()) {
-            // Use Gemini for intelligent parsing
             try {
-                // Build enhanced prompt with RAG context
                 String prompt = buildRAGEnhancedPrompt(query, ragContext);
 
                 getContext().getLog().debug("Generated prompt with RAG context: {}", prompt);
 
-                // Call Gemini asynchronously using your existing config
                 CompletableFuture<String> geminiResponse = GeminiConfig.generateContent(prompt);
 
-                // Handle the async response using pipeToSelf
                 if (ragContext != null) {
-                    // This is a RAG request
                     QueryParserMessages.ParseQueryWithRAG ragRequest =
                             new QueryParserMessages.ParseQueryWithRAG(query, ragContext, replyTo);
                     getContext().pipeToSelf(geminiResponse,
                             (result, throwable) -> new GeminiResponseReceived(ragRequest, result, throwable));
                 } else {
-                    // This is a regular request
                     QueryParserMessages.ParseQuery regularRequest =
                             new QueryParserMessages.ParseQuery(query, replyTo);
                     getContext().pipeToSelf(geminiResponse,
@@ -395,7 +384,6 @@ public class QueryParserActor extends AbstractBehavior<Command> {
                         createFallbackCriteria(query), 0.1));
             }
         } else {
-            // Fallback to basic regex-based parsing
             getContext().getLog().warn("Gemini not configured, using fallback parsing");
             SearchCriteria criteria = createFallbackCriteria(query);
             replyTo.tell(new QueryParserMessages.QueryParsed(criteria, 0.5));
@@ -407,15 +395,12 @@ public class QueryParserActor extends AbstractBehavior<Command> {
     private String buildRAGEnhancedPrompt(String query, VectorSearchActor.SearchResults ragContext) {
         StringBuilder prompt = new StringBuilder();
 
-        // Start with the base prompt from your GeminiPrompts class
         String basePrompt = GeminiPrompts.PARSE_QUERY_PROMPT.replace("%s", query);
         prompt.append(basePrompt);
 
-        // Add RAG context if available
         if (ragContext != null && !ragContext.apartments.isEmpty()) {
             prompt.append("\n\nCONTEXT: Here are some similar apartments that might be relevant:\n");
 
-            // Include top 3 most similar apartments as context
             ragContext.apartments.stream()
                     .limit(3)
                     .forEach(scored -> {
@@ -427,7 +412,6 @@ public class QueryParserActor extends AbstractBehavior<Command> {
                                 .append(")\n");
                     });
 
-            // Include similar past queries if available
             if (!ragContext.similarQueries.isEmpty()) {
                 prompt.append("\nSimilar past queries:\n");
                 ragContext.similarQueries.forEach(q ->
@@ -445,7 +429,6 @@ public class QueryParserActor extends AbstractBehavior<Command> {
         ActorRef<QueryParserMessages.QueryParsed> replyTo;
         String originalQuery;
 
-        // Get the reply-to and query from the appropriate message
         if (message.isRAGRequest) {
             replyTo = message.originalRAGRequest.replyTo;
             originalQuery = message.originalRAGRequest.naturalLanguageQuery;
@@ -457,14 +440,12 @@ public class QueryParserActor extends AbstractBehavior<Command> {
         if (message.throwable != null) {
             getContext().getLog().error("Gemini API call failed for query: {}", originalQuery, message.throwable);
 
-            // Log the failure
             logger.tell(new LoggingMessages.LogEntry(
                     "Gemini API failed: " + message.throwable.getMessage(),
                     Instant.now(),
                     getContext().getSelf()
             ));
 
-            // Fallback to basic parsing
             SearchCriteria fallbackCriteria = createFallbackCriteria(originalQuery);
             replyTo.tell(new QueryParserMessages.QueryParsed(fallbackCriteria, 0.3));
 
@@ -472,19 +453,15 @@ public class QueryParserActor extends AbstractBehavior<Command> {
             try {
                 getContext().getLog().debug("Gemini response: {}", message.result);
 
-                // FIX: Use extractJsonFromResponse to clean up markdown
                 String cleanedJson = extractJsonFromResponse(message.result);
                 getContext().getLog().debug("Cleaned JSON: {}", cleanedJson);
 
-                // Parse JSON response using your existing ObjectMapper
                 SearchCriteria criteria = objectMapper.readValue(cleanedJson, SearchCriteria.class);
 
-                // Calculate confidence based on how well the parsing worked
                 double confidence = calculateConfidence(criteria, originalQuery);
 
                 getContext().getLog().info("Parsed criteria: {} with confidence: {}", criteria, confidence);
 
-                // Log successful parsing
                 logger.tell(new LoggingMessages.LogEntry(
                         "Successfully parsed query with Gemini",
                         Instant.now(),
@@ -509,26 +486,20 @@ public class QueryParserActor extends AbstractBehavior<Command> {
         return this;
     }
 
-    // Fix 2: Update extractJsonFromResponse method
     private String extractJsonFromResponse(String response) {
-        // Remove any markdown formatting or extra text
         String cleaned = response.trim();
 
-        // Remove markdown code blocks (```json ... ```)
         if (cleaned.startsWith("```")) {
-            // Find the end of the first line (which should be ```json or just ```)
             int firstLineEnd = cleaned.indexOf('\n');
             if (firstLineEnd > 0) {
                 cleaned = cleaned.substring(firstLineEnd + 1);
             }
 
-            // Remove closing ```
             if (cleaned.endsWith("```")) {
                 cleaned = cleaned.substring(0, cleaned.length() - 3).trim();
             }
         }
 
-        // Look for JSON object boundaries
         int startIndex = cleaned.indexOf('{');
         int endIndex = cleaned.lastIndexOf('}') + 1;
 
@@ -536,21 +507,18 @@ public class QueryParserActor extends AbstractBehavior<Command> {
             return cleaned.substring(startIndex, endIndex);
         }
 
-        // If no clear JSON found, return original cleaned version
         return cleaned;
     }
 
     private double calculateConfidence(SearchCriteria criteria, String originalQuery) {
-        double confidence = 0.5; // Base confidence
+        double confidence = 0.5;
 
-        // Increase confidence for each extracted field
         if (criteria.getBedrooms().isPresent()) confidence += 0.1;
         if (criteria.getMaxPrice().isPresent()) confidence += 0.1;
         if (criteria.getLocation().isPresent()) confidence += 0.15;
         if (criteria.getPetFriendly().isPresent()) confidence += 0.1;
         if (criteria.getParking().isPresent()) confidence += 0.05;
 
-        // Additional confidence if query contains key terms
         String queryLower = originalQuery.toLowerCase();
         if (queryLower.contains("luxury") || queryLower.contains("modern") ||
                 queryLower.contains("spacious")) {
@@ -561,17 +529,16 @@ public class QueryParserActor extends AbstractBehavior<Command> {
     }
 
     private SearchCriteria createFallbackCriteria(String query) {
-        // Create minimal criteria for fallback
         return new SearchCriteria(
-                null, // minPrice
-                null, // maxPrice
-                null, // bedrooms
-                null, // bathrooms
-                null, // petFriendly
-                null, // parking
-                null, // location
-                List.of(), // amenities
-                null  // proximity
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                List.of(),
+                null
         );
     }
 }

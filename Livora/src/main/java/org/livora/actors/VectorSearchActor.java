@@ -172,7 +172,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
     private final ActorRef<org.livora.messages.Command> logger;
     private final Map<String, Apartment> apartmentCache;
 
-    // IMPORTANT: Map original apartment IDs to UUIDs for Qdrant
     private final Map<String, String> apartmentIdToUuid;
     private final Map<String, String> uuidToApartmentId;
 
@@ -183,32 +182,25 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
     private VectorSearchActor(ActorContext<Command> context) {
         super(context);
 
-        // Get Qdrant host from environment or system property
         String qdrantHost = System.getProperty("qdrant.host",
                 System.getenv().getOrDefault("QDRANT_HOST", "localhost"));
         int qdrantPort = Integer.parseInt(System.getProperty("qdrant.port",
                 System.getenv().getOrDefault("QDRANT_PORT", "6334")));
 
-        // Initialize Qdrant client
         this.qdrantClient = new QdrantClient(
                 QdrantGrpcClient.newBuilder(qdrantHost, qdrantPort, false).build()
         );
 
-        // Initialize embedding model
         this.embeddingModel = new AllMiniLmL6V2EmbeddingModel();
 
-        // Initialize caches
         this.embeddingCache = new ConcurrentHashMap<>();
         this.apartmentCache = new ConcurrentHashMap<>();
 
-        // Initialize ID mapping
         this.apartmentIdToUuid = new ConcurrentHashMap<>();
         this.uuidToApartmentId = new ConcurrentHashMap<>();
 
-        // Spawn logger
         this.logger = context.spawn(LoggingActor.create(), "vectorSearchLogger");
 
-        // Initialize collections
         initializeCollections();
 
         getContext().getLog().info("VectorSearchActor started with Qdrant connection to {}:{}",
@@ -227,7 +219,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
 
     private void initializeCollections() {
         try {
-            // Check if collections exist
             boolean apartmentsExists = false;
             boolean queriesExists = false;
 
@@ -238,7 +229,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                 apartmentsExists = true;
                 getContext().getLog().info("Apartments collection already exists");
             } catch (Exception e) {
-                // Collection doesn't exist
             }
 
             try {
@@ -248,10 +238,8 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                 queriesExists = true;
                 getContext().getLog().info("Queries collection already exists");
             } catch (Exception e) {
-                // Collection doesn't exist
             }
 
-            // Create apartments collection if needed
             if (!apartmentsExists) {
                 Collections.CreateCollection createCollection = Collections.CreateCollection.newBuilder()
                         .setCollectionName(APARTMENTS_COLLECTION)
@@ -269,7 +257,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                 getContext().getLog().info("Created apartments collection in Qdrant");
             }
 
-            // Create queries collection if needed
             if (!queriesExists) {
                 Collections.CreateCollection createCollection = Collections.CreateCollection.newBuilder()
                         .setCollectionName(QUERIES_COLLECTION)
@@ -292,13 +279,8 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
         }
     }
 
-    /**
-     * Generate or get a UUID for an apartment ID
-     */
     private String getOrCreateUuid(String apartmentId) {
         return apartmentIdToUuid.computeIfAbsent(apartmentId, id -> {
-            // Generate a deterministic UUID based on the apartment ID
-            // This ensures the same apartment always gets the same UUID
             String uuid = UUID.nameUUIDFromBytes(id.getBytes()).toString();
             uuidToApartmentId.put(uuid, id);
             return uuid;
@@ -309,37 +291,29 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
         long startTime = System.currentTimeMillis();
 
         try {
-            // Create text representation for embedding
             String apartmentText = createApartmentText(msg.apartment);
 
-            // Check cache first
             float[] vector = embeddingCache.get(apartmentText);
             if (vector == null) {
-                // Generate embedding
                 Response<Embedding> embeddingResponse = embeddingModel.embed(apartmentText);
                 vector = embeddingResponse.content().vector();
                 embeddingCache.put(apartmentText, vector);
             }
 
-            // Store apartment in cache
             apartmentCache.put(msg.apartment.getId(), msg.apartment);
 
-            // Get or create UUID for this apartment
             String uuid = getOrCreateUuid(msg.apartment.getId());
 
-            // Create payload with apartment data
             Map<String, Value> payload = createApartmentPayload(msg.apartment);
 
-            // Convert float[] to List<Float> for Qdrant
             List<Float> vectorList = new ArrayList<>();
             for (float v : vector) {
                 vectorList.add(v);
             }
 
-            // Create the point with UUID
             PointStruct point = PointStruct.newBuilder()
                     .setId(PointId.newBuilder()
-                            .setUuid(uuid)  // Use the generated UUID
+                            .setUuid(uuid)
                             .build())
                     .setVectors(Points.Vectors.newBuilder()
                             .setVector(Points.Vector.newBuilder()
@@ -349,13 +323,11 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                     .putAllPayload(payload)
                     .build();
 
-            // Create upsert request
             UpsertPoints upsertPoints = UpsertPoints.newBuilder()
                     .setCollectionName(APARTMENTS_COLLECTION)
                     .addPoints(point)
                     .build();
 
-            // Execute upsert
             ListenableFuture<UpdateResult> upsertFuture =
                     qdrantClient.upsertAsync(upsertPoints);
             upsertFuture.get();
@@ -394,12 +366,10 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
 
                 apartmentCache.put(apartment.getId(), apartment);
 
-                // Get or create UUID for this apartment
                 String uuid = getOrCreateUuid(apartment.getId());
 
                 Map<String, Value> payload = createApartmentPayload(apartment);
 
-                // Convert float[] to List<Float>
                 List<Float> vectorList = new ArrayList<>();
                 for (float v : vector) {
                     vectorList.add(v);
@@ -407,7 +377,7 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
 
                 PointStruct point = PointStruct.newBuilder()
                         .setId(PointId.newBuilder()
-                                .setUuid(uuid)  // Use the generated UUID
+                                .setUuid(uuid)
                                 .build())
                         .setVectors(Points.Vectors.newBuilder()
                                 .setVector(Points.Vector.newBuilder()
@@ -447,7 +417,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
         long startTime = System.currentTimeMillis();
 
         try {
-            // Generate query embedding (with caching)
             float[] queryVector = embeddingCache.get(msg.query);
             if (queryVector == null) {
                 Response<Embedding> embeddingResponse = embeddingModel.embed(msg.query);
@@ -455,13 +424,11 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                 embeddingCache.put(msg.query, queryVector);
             }
 
-            // Convert float[] to List<Float>
             List<Float> queryVectorList = new ArrayList<>();
             for (float v : queryVector) {
                 queryVectorList.add(v);
             }
 
-            // Create search request
             SearchPoints searchPoints = SearchPoints.newBuilder()
                     .setCollectionName(APARTMENTS_COLLECTION)
                     .addAllVector(queryVectorList)
@@ -471,17 +438,14 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                             .build())
                     .build();
 
-            // Execute search - returns List<ScoredPoint> directly
             ListenableFuture<List<ScoredPoint>> searchFuture = qdrantClient.searchAsync(searchPoints);
             List<ScoredPoint> searchResults = searchFuture.get();
 
-            // Convert results to ScoredApartments
             List<ScoredApartment> scoredApartments = new ArrayList<>();
             for (ScoredPoint scoredPoint : searchResults) {
                 Map<String, Value> payload = scoredPoint.getPayloadMap();
                 String apartmentId = payload.get("id").getStringValue();
 
-                // Try to get from cache first
                 Apartment apt = apartmentCache.get(apartmentId);
                 if (apt == null) {
                     apt = reconstructApartment(payload);
@@ -490,7 +454,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                 scoredApartments.add(new ScoredApartment(apt, scoredPoint.getScore()));
             }
 
-            // Search for similar past queries
             List<String> similarQueries = searchSimilarQueries(queryVectorList);
 
             long searchTime = System.currentTimeMillis() - startTime;
@@ -508,7 +471,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
     }
 
     private Behavior<Command> onStoreSuccessfulQuery(StoreSuccessfulQuery msg) {
-        // Store successful queries for learning
         if (msg.resultCount > 0) {
             try {
                 float[] queryVector = embeddingCache.get(msg.query);
@@ -518,7 +480,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
                     embeddingCache.put(msg.query, queryVector);
                 }
 
-                // Convert float[] to List<Float>
                 List<Float> queryVectorList = new ArrayList<>();
                 for (float v : queryVector) {
                     queryVectorList.add(v);
@@ -594,7 +555,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
     private Map<String, Value> createApartmentPayload(Apartment apt) {
         Map<String, Value> payload = new HashMap<>();
 
-        // Store the original apartment ID in the payload
         payload.put("id", Value.newBuilder().setStringValue(apt.getId()).build());
         payload.put("title", Value.newBuilder().setStringValue(apt.getTitle()).build());
         payload.put("price", Value.newBuilder().setIntegerValue(apt.getPrice()).build());
@@ -615,7 +575,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
         payload.put("longitude", Value.newBuilder()
                 .setDoubleValue(apt.getLocation().getLongitude()).build());
 
-        // Store amenities as comma-separated string
         if (!apt.getAmenities().isEmpty()) {
             payload.put("amenities", Value.newBuilder()
                     .setStringValue(String.join(",", apt.getAmenities())).build());
@@ -625,7 +584,6 @@ public class VectorSearchActor extends AbstractBehavior<VectorSearchActor.Comman
     }
 
     private Apartment reconstructApartment(Map<String, Value> payload) {
-        // Reconstruct apartment from Qdrant payload
         List<String> amenities = List.of();
         if (payload.containsKey("amenities")) {
             String amenitiesStr = payload.get("amenities").getStringValue();

@@ -18,7 +18,7 @@ public class GeminiTest {
                 "I need a 2 bedroom apartment with parking near downtown under $1500");
             
             CompletableFuture<String> future = GeminiConfig.generateContent(prompt);
-            String result = future.get(); // Wait for completion
+            String result = future.get();
             
             System.out.println("Gemini Response: " + result);
             

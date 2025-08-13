@@ -24,9 +24,6 @@ public class IndexingService {
     private static final int BATCH_SIZE = 10;
     private static final Duration ASK_TIMEOUT = Duration.ofSeconds(30);
 
-    /**
-     * Index all apartments in batches for better performance
-     */
     public static CompletableFuture<IndexingResult> indexAllApartments(
             ActorSystem<Void> system,
             ActorRef<VectorSearchActor.Command> vectorSearch,
@@ -40,20 +37,15 @@ public class IndexingService {
         AtomicInteger totalFailed = new AtomicInteger(0);
         List<String> allErrors = new ArrayList<>();
 
-        // Split into batches
         List<List<Apartment>> batches = createBatches(apartments, BATCH_SIZE);
         system.log().info("Created {} batches for indexing", batches.size());
 
-        // Process batches sequentially to avoid overwhelming the system
         processBatchesSequentially(system, vectorSearch, batches, 0,
                 totalIndexed, totalFailed, allErrors, future);
 
         return future;
     }
 
-    /**
-     * Index apartments from JSON file
-     */
     public static CompletableFuture<IndexingResult> indexFromFile(
             ActorSystem<Void> system,
             ActorRef<VectorSearchActor.Command> vectorSearch,
@@ -71,9 +63,6 @@ public class IndexingService {
         }
     }
 
-    /**
-     * Index a single apartment (useful for real-time updates)
-     */
     public static CompletableFuture<Boolean> indexSingleApartment(
             ActorSystem<Void> system,
             ActorRef<VectorSearchActor.Command> vectorSearch,
@@ -100,25 +89,21 @@ public class IndexingService {
                 });
     }
 
-    /**
-     * Store a successful query for RAG learning
-     */
     public static void storeSuccessfulQuery(
             ActorRef<VectorSearchActor.Command> vectorSearch,
             String query,
             int resultCount) {
 
-        // Create a simple SearchCriteria for storing with the query
         SearchCriteria criteria = new SearchCriteria(
-                null, // minPrice
-                null, // maxPrice
-                null, // bedrooms
-                null, // bathrooms
-                null, // petFriendly
-                null, // parking
-                null, // location
-                List.of(), // amenities
-                null  // proximity
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                List.of(),
+                null
         );
 
         vectorSearch.tell(new VectorSearchActor.StoreSuccessfulQuery(
@@ -139,7 +124,6 @@ public class IndexingService {
             CompletableFuture<IndexingResult> finalResult) {
 
         if (currentBatchIndex >= batches.size()) {
-            // All batches processed
             IndexingResult result = new IndexingResult(
                     totalIndexed.get(),
                     totalFailed.get(),
@@ -179,14 +163,12 @@ public class IndexingService {
                         batchResult.totalIndexed, batchResult.failed);
             }
 
-            // Add delay between batches to avoid overwhelming the system
             try {
                 Thread.sleep(500); // 500ms delay between batches
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
 
-            // Process next batch
             processBatchesSequentially(system, vectorSearch, batches,
                     currentBatchIndex + 1, totalIndexed, totalFailed, allErrors, finalResult);
         });
@@ -207,13 +189,11 @@ public class IndexingService {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
-        // Try as resource first
         InputStream is = IndexingService.class.getResourceAsStream(filePath);
         if (is != null) {
             return objectMapper.readValue(is, new TypeReference<List<Apartment>>() {});
         }
 
-        // Try as file
         File file = new File(filePath);
         if (file.exists()) {
             return objectMapper.readValue(file, new TypeReference<List<Apartment>>() {});
@@ -222,9 +202,6 @@ public class IndexingService {
         throw new IllegalArgumentException("Cannot find apartments file: " + filePath);
     }
 
-    /**
-     * Result of indexing operation
-     */
     public static class IndexingResult {
         public final int totalIndexed;
         public final int totalFailed;
@@ -246,21 +223,14 @@ public class IndexingService {
         }
     }
 
-    /**
-     * Utility to reindex all apartments (useful for updates)
-     */
     public static CompletableFuture<IndexingResult> reindexAll(
             ActorSystem<Void> system,
             ActorRef<VectorSearchActor.Command> vectorSearch) {
 
         system.log().info("Starting full reindex of all apartments");
 
-        // Load apartments from the default location
         try {
             List<Apartment> apartments = loadApartmentsFromFile("/apartments.json");
-
-            // Clear existing index (you might want to implement this in VectorSearchActor)
-            // For now, we'll just overwrite with the same IDs
 
             return indexAllApartments(system, vectorSearch, apartments);
         } catch (Exception e) {

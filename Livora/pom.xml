@@ -31,49 +31,36 @@
     </repositories>
 
     <dependencies>
-        <!-- Akka Typed Core -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor-typed_${scala.binary.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
-
-        <!-- Akka Cluster Typed -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-cluster-typed_${scala.binary.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
-
-        <!-- Akka Cluster Sharding -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-cluster-sharding-typed_${scala.binary.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
-
-        <!-- Akka HTTP for REST API -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-http_${scala.binary.version}</artifactId>
             <version>${akka-http.version}</version>
         </dependency>
-
-        <!-- Akka HTTP Jackson Support -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-http-jackson_${scala.binary.version}</artifactId>
             <version>${akka-http.version}</version>
         </dependency>
-
-        <!-- Akka Streams -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-stream_${scala.binary.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
-
-        <!-- SLF4J & Logback for Logging -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-slf4j_${scala.binary.version}</artifactId>
@@ -89,15 +76,11 @@
             <artifactId>logback-classic</artifactId>
             <version>1.4.11</version>
         </dependency>
-
-        <!-- Qdrant Java Client -->
         <dependency>
             <groupId>io.qdrant</groupId>
             <artifactId>client</artifactId>
             <version>1.7.0</version>
         </dependency>
-
-        <!-- For generating embeddings -->
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-embeddings-all-minilm-l6-v2</artifactId>
@@ -127,36 +110,28 @@
             <artifactId>grpc-stub</artifactId>
             <version>1.58.0</version>
         </dependency>
-
-        <!-- Protobuf -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
             <version>3.24.0</version>
         </dependency>
-
-        <!-- Alternative: Use Gemini for embeddings -->
         <dependency>
             <groupId>com.google.cloud</groupId>
             <artifactId>google-cloud-aiplatform</artifactId>
             <version>3.29.0</version>
         </dependency>
-
-        <!-- Google AI SDK (Simpler than VertexAI for this project) -->
         <dependency>
             <groupId>com.google.genai</groupId>
             <artifactId>google-genai</artifactId>
             <version>1.4.1</version>
         </dependency>
 
-        <!-- HTTP Client for Gemini API calls -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.12.0</version>
         </dependency>
 
-        <!-- JSON Processing -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -168,7 +143,6 @@
             <version>2.15.3</version>
         </dependency>
 
-        <!-- Testing Dependencies -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor-testkit-typed_${scala.binary.version}</artifactId>
@@ -206,8 +180,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.2</version>
             </plugin>
-
-            <!-- Exec plugin for running nodes -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -217,7 +189,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Shade plugin for fat JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>

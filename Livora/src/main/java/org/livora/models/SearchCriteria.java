@@ -17,7 +17,6 @@ public class SearchCriteria {
     private final List<String> amenities;
     private final Optional<String> proximity;
 
-    // New field for RAG/semantic search scores
     private Map<String, Float> semanticScores;
 
     @JsonCreator
@@ -43,7 +42,6 @@ public class SearchCriteria {
         this.semanticScores = null; // Will be set later if using RAG
     }
 
-    // Getters
     public Optional<Integer> getMinPrice() { return minPrice; }
     public Optional<Integer> getMaxPrice() { return maxPrice; }
     public Optional<Integer> getBedrooms() { return bedrooms; }
@@ -54,7 +52,6 @@ public class SearchCriteria {
     public List<String> getAmenities() { return amenities; }
     public Optional<String> getProximity() { return proximity; }
 
-    // Getter and setter for semantic scores
     public Map<String, Float> getSemanticScores() {
         return semanticScores;
     }
@@ -63,12 +60,10 @@ public class SearchCriteria {
         this.semanticScores = semanticScores;
     }
 
-    // Helper method to check if semantic search is enabled
     public boolean hasSemanticScores() {
         return semanticScores != null && !semanticScores.isEmpty();
     }
 
-    // Helper method to get semantic score for a specific apartment
     public float getSemanticScore(String apartmentId) {
         if (semanticScores == null) {
             return 0.0f;
@@ -98,7 +93,6 @@ public class SearchCriteria {
             sb.append("semanticScoresCount=").append(semanticScores.size()).append(", ");
         }
 
-        // Remove trailing comma and space if present
         if (sb.length() > 15) {
             sb.setLength(sb.length() - 2);
         }

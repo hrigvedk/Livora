@@ -26,7 +26,6 @@ public class GeminiConfig {
                 new IllegalStateException("GEMINI_API_KEY environment variable not set"));
         }
 
-        // Create request body
         String requestBody = String.format("""
             {
               "contents": [{

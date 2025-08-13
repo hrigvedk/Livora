@@ -31,30 +31,21 @@ public class RestApiRoutes {
     public Route createRoutes() {
         return route(
                 respondWithHeaders(Arrays.asList(
-                                // Allow all origins for development (change to specific domain in production)
                                 RawHeader.create("Access-Control-Allow-Origin", "*"),
-                                // Allow common HTTP methods
                                 RawHeader.create("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"),
-                                // Allow common headers that React/axios sends
                                 RawHeader.create("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With, Accept, Origin, Cache-Control"),
-                                // Allow credentials if needed
                                 RawHeader.create("Access-Control-Allow-Credentials", "true"),
-                                // Cache preflight for 1 hour
                                 RawHeader.create("Access-Control-Max-Age", "3600"),
-                                // Expose custom headers to frontend
                                 RawHeader.create("Access-Control-Expose-Headers", "Content-Type, X-Session-Id")
                         ), () ->
                                 route(
-                                        // Handle CORS preflight requests (OPTIONS)
                                         options(() -> {
                                             system.log().debug("CORS preflight request received");
                                             return complete(StatusCodes.OK, "CORS preflight handled");
                                         }),
 
-                                        // API routes
                                         pathPrefix("api", () ->
                                                 route(
-                                                        // Search endpoint
                                                         path("search", () ->
                                                                 post(() ->
                                                                         entity(Jackson.unmarshaller(SearchRequestDTO.class), searchRequest -> {
@@ -62,11 +53,9 @@ public class RestApiRoutes {
                                                                             system.log().info("REST API received search request: {}",
                                                                                     searchRequest.getQuery());
 
-                                                                            // Generate session ID if not provided
                                                                             String sessionId = searchRequest.getSessionId() != null ?
                                                                                     searchRequest.getSessionId() : UUID.randomUUID().toString();
 
-                                                                            // Ask the UserRequestActor to process the search
                                                                             CompletionStage<UserRequestMessages.SearchResponse> responseFuture =
                                                                                     AskPattern.ask(
                                                                                             userRequestActor,
@@ -80,7 +69,6 @@ public class RestApiRoutes {
                                                                                             system.scheduler()
                                                                                     );
 
-                                                                            // Convert to HTTP response
                                                                             return onSuccess(responseFuture, response -> {
                                                                                 system.log().info("Returning {} results for session {}",
                                                                                         response.results.size(), response.sessionId);
@@ -97,7 +85,6 @@ public class RestApiRoutes {
 
                                                                     String sessionId = UUID.randomUUID().toString();
 
-                                                                    // Use empty search query to get all apartments (will bypass vector search/parsing)
                                                                     CompletionStage<UserRequestMessages.SearchResponse> responseFuture =
                                                                             AskPattern.ask(
                                                                                     userRequestActor,
@@ -116,7 +103,6 @@ public class RestApiRoutes {
                                                                 })
                                                         ),
 
-                                                        // Test endpoint for frontend debugging
                                                         path("test", () ->
                                                                 get(() -> {
                                                                     TestResponse testResponse = new TestResponse(
@@ -130,7 +116,6 @@ public class RestApiRoutes {
                                                 )
                                         ),
 
-                                        // Health check endpoint
                                         path("health", () ->
                                                 get(() -> {
                                                     HealthResponse healthResponse = new HealthResponse(
@@ -142,7 +127,6 @@ public class RestApiRoutes {
                                                 })
                                         ),
 
-                                        // Cluster status endpoint
                                         path("cluster", () ->
                                                 get(() -> {
                                                     Cluster cluster = Cluster.get(system);
@@ -156,7 +140,6 @@ public class RestApiRoutes {
                                                 })
                                         ),
 
-                                        // CORS debug endpoint
                                         pathPrefix("debug", () ->
                                                 path("cors", () ->
                                                         get(() -> {
@@ -174,7 +157,6 @@ public class RestApiRoutes {
         );
     }
 
-    // DTO classes for REST API
     public static class SearchRequestDTO {
         private String query;
         private String sessionId;
@@ -186,7 +168,6 @@ public class RestApiRoutes {
             this.sessionId = sessionId;
         }
 
-        // Getters and setters for Jackson
         public String getQuery() { return query; }
         public String getSessionId() { return sessionId; }
         public void setQuery(String query) { this.query = query; }
@@ -208,7 +189,6 @@ public class RestApiRoutes {
             this.timestamp = timestamp;
         }
 
-        // Getters and setters for Jackson
         public String getStatus() { return status; }
         public String getNodeAddress() { return nodeAddress; }
         public long getTimestamp() { return timestamp; }
@@ -230,7 +210,6 @@ public class RestApiRoutes {
             this.memberCount = memberCount;
         }
 
-        // Getters and setters for Jackson
         public String getSelfAddress() { return selfAddress; }
         public String getRoles() { return roles; }
         public int getMemberCount() { return memberCount; }
