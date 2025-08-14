@@ -1,5 +1,6 @@
 # Livora: Intelligent Apartment Finder with RAG
 
+## Architecture
 ![Livora Architecture Diagram](images/Livora.png)
 
 ## Project Overview
@@ -13,6 +14,9 @@ The **Intelligent Apartment Finder** is a distributed application that revolutio
 - **Real-time Processing**: Asynchronous actor-based message passing
 - **Interactive Map Visualization**: React frontend with Leaflet integration
 - **Smart Query Parsing**: Gemini LLM converts natural language to structured search criteria
+
+## Query Flow
+![Query Flow Diagram](images/flow.png)
 
 ## Technology Stack
 
